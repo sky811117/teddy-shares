@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>景泰精選 · 給 黃小姐 的 18 戶整理</title>
+<meta property="og:title" content="景泰精選 · 給 黃小姐 的 18 戶整理">
+<meta property="og:description" content="找房需求：潭子三房平車">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF7F2;
+    --bg-soft: #F2EDE4;
+    --card: #FFFFFF;
+    --wood: #A88B6E;
+    --wood-deep: #8B7355;
+    --wood-light: #D9C7B0;
+    --accent: #C9785A;
+    --accent-deep: #A85D3F;
+    --text: #2C2620;
+    --text-soft: #6B6258;
+    --text-muted: #9A9088;
+    --border: #E8DFD2;
+    --shadow: 0 4px 16px rgba(139, 115, 85, 0.08);
+    --shadow-hover: 0 16px 40px rgba(139, 115, 85, 0.18);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+  body {
+    font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'PingFang TC', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+
+  /* ===== Hero ===== */
+  .hero {
+    background:
+      linear-gradient(135deg, rgba(242,237,228,0.85) 0%, rgba(232,223,210,0.95) 100%),
+      url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80') center/cover;
+    padding: 80px 20px 60px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--wood-deep);
+    color: #FFF;
+    font-size: 16px;
+    letter-spacing: 4px;
+    padding: 9px 24px;
+    border-radius: 24px;
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-size: clamp(30px, 5.5vw, 50px);
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+  }
+  .hero .for-client {
+    font-size: clamp(18px, 2.6vw, 22px);
+    color: var(--accent-deep);
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+  .hero .summary {
+    font-size: clamp(16px, 2vw, 18px);
+    color: var(--text-soft);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.9;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-num {
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--wood-deep);
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 14px;
+    color: var(--text-soft);
+    margin-top: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  /* ===== Sticky Nav ===== */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 247, 242, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    padding: 14px 0;
+  }
+  .nav-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 0 20px;
+    scrollbar-width: none;
+  }
+  .nav-scroll::-webkit-scrollbar { display: none; }
+  .nav-chip {
+    flex-shrink: 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-soft);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 22px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  .nav-chip:hover {
+    background: var(--wood-deep);
+    color: #FFF;
+    border-color: var(--wood-deep);
+  }
+  .nav-chip-count {
+    display: inline-block;
+    background: var(--wood-light);
+    color: var(--wood-deep);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 12px;
+    margin-left: 8px;
+  }
+  .nav-chip:hover .nav-chip-count {
+    background: rgba(255,255,255,0.25);
+    color: #FFF;
+  }
+
+  /* ===== Section ===== */
+  .section {
+    padding: 56px 0 30px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section:last-of-type { border-bottom: none; }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .section-title {
+    font-size: clamp(22px, 3.2vw, 30px);
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 28px;
+    background: var(--accent);
+    border-radius: 3px;
+  }
+  .section-meta {
+    font-size: 16px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+  .section-meta strong { color: var(--accent-deep); font-weight: 700; }
+
+  /* ===== Card ===== */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 22px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--wood-light);
+  }
+  .card-image {
+    width: 100%;
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--bg-soft);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.15) 100%);
+  }
+  .card-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .card-tagline {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--accent-deep);
+    margin-bottom: 14px;
+    line-height: 1.5;
+    min-height: 50px;
+  }
+  .card-price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--bg-soft);
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .card-price {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--accent-deep);
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+  .card-price-unit {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-left: 5px;
+    font-weight: 400;
+  }
+  .card-floor {
+    background: var(--bg-soft);
+    color: var(--wood-deep);
+    font-size: 17px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 10px;
+  }
+  .card-spec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 18px;
+    margin-bottom: 18px;
+  }
+  .spec-item { display: flex; flex-direction: column; gap: 3px; }
+  .spec-label { font-size: 14px; color: var(--text-muted); letter-spacing: 1px; }
+  .spec-value { font-size: 17px; color: var(--text); font-weight: 500; }
+  .spec-value.highlight { color: var(--wood-deep); font-weight: 700; }
+  .card-address {
+    font-size: 16px;
+    color: var(--text-soft);
+    margin-bottom: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--bg-soft);
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    line-height: 1.6;
+  }
+  .card-address::before { content: '📍'; flex-shrink: 0; }
+  .card-cta {
+    margin-top: auto;
+    background: var(--wood-deep);
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .card-cta:hover { background: var(--accent); transform: translateY(-1px); }
+  .card-cta-arrow { transition: transform 0.2s ease; }
+  .card-cta:hover .card-cta-arrow { transform: translateX(4px); }
+
+  /* ===== Footer ===== */
+  .footer {
+    background: linear-gradient(135deg, #2C2620 0%, #3D352D 100%);
+    color: #E8DFD2;
+    padding: 60px 20px 36px;
+    margin-top: 50px;
+  }
+  .footer-content { max-width: 1200px; margin: 0 auto; text-align: center; }
+  .footer-title { font-size: 30px; font-weight: 700; color: #FFF; margin-bottom: 8px; letter-spacing: 6px; }
+  .footer-subtitle { font-size: 17px; color: var(--wood-light); margin-bottom: 32px; letter-spacing: 3px; }
+  .footer-contact {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: #E8DFD2;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .contact-item:hover { color: var(--accent); }
+  .contact-icon { font-size: 20px; }
+  .footer-license {
+    font-size: 14px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    line-height: 2;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+  }
+  .footer-date {
+    font-size: 13px;
+    color: rgba(232, 223, 210, 0.4);
+    margin-top: 16px;
+    letter-spacing: 2px;
+  }
+
+  /* ===== Mobile ===== */
+  @media (max-width: 640px) {
+    .hero { padding: 50px 16px 36px; }
+    .hero-stats { gap: 28px; }
+    .hero-stat-num { font-size: 32px; }
+    .section { padding: 40px 0 22px; }
+    .grid { grid-template-columns: 1fr; gap: 16px; }
+    .card-image { height: 200px; }
+    .card-content { padding: 18px; }
+    .card-price { font-size: 36px; }
+    .card-tagline { font-size: 16px; min-height: auto; }
+    .footer-contact { flex-direction: column; gap: 16px; }
+    .footer-title { font-size: 26px; letter-spacing: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-tag">景 泰 精 選</div>
+  <h1>潭子三房平車 18 戶 客製整理</h1>
+  <div class="for-client">給 黃小姐 的專屬精選 · 找房需求：潭子三房平車</div>
+  <p class="summary">
+    為您挑選潭子區 11 個社區、18 戶 3 房格局物件<br>
+    售價 1,588 萬 ~ 2,088 萬，全數含坡道平面車位、3 房 2 廳 2 衛標準格局
+  </p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hero-stat-num">18</div><div class="hero-stat-label">精選戶數</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">11</div><div class="hero-stat-label">優質社區</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">3房+平車</div><div class="hero-stat-label">統一條件</div></div>
+  </div>
+</section>
+
+<nav class="sticky-nav">
+  <div class="nav-scroll">
+    <a class="nav-chip" href="#c-yujing">御景莊園<span class="nav-chip-count">2</span></a>
+    <a class="nav-chip" href="#c-fujing">馥景莊園<span class="nav-chip-count">4</span></a>
+    <a class="nav-chip" href="#c-hengshan">恆山首恆<span class="nav-chip-count">1</span></a>
+    <a class="nav-chip" href="#c-jiutang">久樘臻悅<span class="nav-chip-count">1</span></a>
+    <a class="nav-chip" href="#c-hemao">和茂大景莊園<span class="nav-chip-count">1</span></a>
+    <a class="nav-chip" href="#c-jiapan">嘉磐信義<span class="nav-chip-count">2</span></a>
+    <a class="nav-chip" href="#c-xianglin">鄉林天韻<span class="nav-chip-count">1</span></a>
+    <a class="nav-chip" href="#c-yinghua">原櫻崇現櫻花知殷<span class="nav-chip-count">2</span></a>
+    <a class="nav-chip" href="#c-shuntian">順天豐華<span class="nav-chip-count">2</span></a>
+    <a class="nav-chip" href="#c-jiahua">佳鏵大聯盟<span class="nav-chip-count">1</span></a>
+    <a class="nav-chip" href="#c-ruixiang">睿嚮大涵<span class="nav-chip-count">1</span></a>
+  </div>
+</nav>
+
+<div class="container">
+
+<section class="section" id="c-yujing">
+  <div class="section-header">
+    <h2 class="section-title">佳茂6962御景莊園</h2>
+    <div class="section-meta">屋齡 0.9 年 · <strong>2 戶可選</strong> · 1,588 ~ 1,688 萬</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvmLd9cxImzR4NVelBZRaHFS_n_IPbapeJK6rweCIhXfPufobp_egqkqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQT_6nGPDWaMIt7TRRcj4F3T5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">6962御景莊園 · 朝南邊間大三房平車</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,588</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">9F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">49.17 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">27.104 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">0.9 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B3-10</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">8.520 坪</span></div>
+        </div>
+        <div class="card-address">台中市潭子區僑興一街</div>
+        <a class="card-cta" href="https://x.ychouse.tw/5Skjhj" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuccrHgmgywna9SN8RWwiyQkyuF5qIxSHcAEvQB63WLJLLEnz8cz3PUqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQhLWLM1W06i6B5FH7_FCswj5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">御景莊園 · 全新未住花園景觀戶 · 三房平車</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,688</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">6F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">46.758 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.513 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">0.9 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B3-66</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">8.520 坪</span></div>
+        </div>
+        <div class="card-address">台中市潭子區僑興一街 220 號</div>
+        <a class="card-cta" href="https://x.ychouse.tw/65S9P4" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="c-fujing">
+  <div class="section-header">
+    <h2 class="section-title">佳茂6962馥景莊園</h2>
+    <div class="section-meta">屋齡 1.5 年 · <strong>4 戶可選</strong> · 1,688 ~ 1,758 萬</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCshkZnZu4wZ2rMVbcViAlvFloOB93klcWranPeRYYRhYFl2XN7FjAXbqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQruh-Gt23mTzaYgmqa__ngegw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyikvTCRcLVnG1BFc3wgbmNqY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">勝利商圈 · 6962馥景莊園 · 全新三房+平面車位</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,688</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">8F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">45.405 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.474 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">1.5 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B3-113</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">7.290 坪</span></div>
+        </div>
+        <div class="card-address">台中市潭子區僑興路</div>
+        <a class="card-cta" href="https://x.ychouse.tw/7yprtM" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvRmOmtMHaCSMk8LSrp6Fk--723MO9aiforCHzoX70q_KXnkiCcWsyVqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQuTg9Imam7DugdiIXq_3MZT5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">佳茂6962馥景莊園 · 朝南三房平車 · 送五家電</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,698</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">8F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">47.275 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">26.326 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">1.5 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B2-187</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
+        </div>
+        <div class="card-address">台中市潭子區僑興一街</div>
+        <a class="card-cta" href="https://x.ychouse.tw/7QPfnQ" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCulG8yyh3CfQZU17TjJcUAy8SbH77j8S8qPcS_YQwOWOYe6hKQhd2KYzhxlNAx_tGVI54tDXXIxDa64od0jAbOZrBTGt_NC0NxMCtyFz-LqpYF32GTxpmDwu98NT3cksTOdfCdPPdyK1-QhnSu_0jfkhBSYTdU66sDZWrFWv41-C6JqncOvTMXkRTN0yh9sNLwbEis8iAdARGfcIjHhQUn2VzJuUfrwrUT1VvvdLJYPKB7Ii2ySo48i7f0wuEcC1tVjXthpPS02sD2VM3YRYuFYDrVkvPbncUXGa9CO-bbBrxCIATOShhyL5f4KHQywaRs&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">佳茂6962馥景莊園三房平車</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,720</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">11F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">46.067 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.513 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">1.5 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B2-251</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">7.912 坪</span></div>
+        </div>
+        <div class="card-address">台中市潭子區僑興路 109 號</div>
+        <a class="card-cta" href="https://x.ychouse.tw/777H33" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCv6qxuZAnRUfP87PPbIErgIWXyFSUjb9oC--G4ppeEuAYe6hKQhd2KYzhxlNAx_tGVI54tDXXIxDa64od0jAbOZrBTGt_NC0NxMCtyFz-LqpYF32GTxpmDwu98NT3cksTOdfCdPPdyK1-QhnSu_0jfkhBSYTdU66sDZWrFWv41-C6JqncOvTMXkRTN0yh9sNLwbEis8iAdARGfcIjHhQUn2VzJuUfrwrUT1VvvdLJYPKG3Xcx1BX5PJ4N68j4_nZFdjXthpPS02sD2VM3YRYuFYDrVkvPbncUXGa9CO-bbBrxCIATOShhyL5f4KHQywaRs&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">馥景莊園視野高樓層美三房</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,758</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">13F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">47.272 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">26.323 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">1.5 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B2</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
+        </div>
+        <div class="card-address">台中市潭子區僑興路 109 號</div>
+        <a class="card-cta" href="https://x.ychouse.tw/5CtqXv" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="c-hengshan">
+  <div class="section-header">
+    <h2 class="section-title">恆山首恆</h2>
+    <div class="section-meta">屋齡 3.2 年 · <strong>1 戶可選</strong> · 1,698 萬</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtKEOgZbDoa4qQw95vYz_AxRQIfL1gZbqgnAICVcujB-Vm6ZlcnqL02qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQ6_U5e_dkUvi-u9kMCwtoOD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">美美恆山首恆 · 迎光前陽台🌞明亮舒適 · 平面車位</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,698</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">2F / 11F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">50.079 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">27.088 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">3.2 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B1-76</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
+        </div>
+        <div class="card-address">台中市潭子區弘智街</div>
+        <a class="card-cta" href="https://x.ychouse.tw/8vwQTG" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="c-jiutang">
+  <div class="section-header">
+    <h2 class="section-title">久樘臻悅</h2>
+    <div class="section-meta">屋齡 2.1 年 · <strong>1 戶可選</strong> · 1,698 萬</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsPnIaVa9WWrLJPEuxqC6jKDu_xmeD6pHkTSuClKsw5uZto5a66epL0qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQKz2I1ECPS3u-u9kMCwtoOD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">全新久樘臻悅朝南永久棟距無限視野三面臨路獨棟社區</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,698</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">12F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">50.975 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">28.78 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">2.1 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B1-93</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
+        </div>
+        <div class="card-address">台中市潭子區弘智二街 128 號</div>
+        <a class="card-cta" href="https://x.ychouse.tw/6BGrnD" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="c-hemao">
+  <div class="section-header">
+    <h2 class="section-title">佳茂6962和茂大景莊園</h2>
+    <div class="section-meta">屋齡 2.0 年 · <strong>1 戶可選</strong> · 1,728 萬</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCve0vOUexWFUOQLjhwXARBbb0yu2LiZw1-DF8eEQWfml0anMGl0F4YyqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQRMooRse1L0QUSu0-0b3RzD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">大景莊園輕奢質感三房平車 · 漢神洲際 · 北屯好市多</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,728</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">9F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">47.379 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">26.323 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">2.0 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B3-127</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">7.903 坪</span></div>
+        </div>
+        <div class="card-address">台中市潭子區僑興一街</div>
+        <a class="card-cta" href="https://x.ychouse.tw/7fYCRg" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="c-jiapan">
+  <div class="section-header">
+    <h2 class="section-title">嘉磐信義</h2>
+    <div class="section-meta">屋齡 2.0 年 · <strong>2 戶可選</strong> · 1,750 ~ 1,988 萬</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsQ6SfyIdbuq6wnzZVhori9O4Ltb0ngKqIp-VJ2Qgug7zD8cdHFhj4GqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQruh-Gt23mTzaYgmqa__ngegw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyhD2frrVTloV9zhve_2Hpv5Y17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">🎀嘉磐信義全新未住三房平車樹梢戶</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,750</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">2F / 14F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">50.257 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">26.157 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">2.0 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">10.752 坪</span></div>
+        </div>
+        <div class="card-address">台中市潭子區弘仁街 75 號</div>
+        <a class="card-cta" href="https://x.ychouse.tw/7Qsmbb" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsvtocxdmZvW99ST_goHeCt78YGhatYB2Uc4K6U6HHEuWWfEihKNr9_qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQqG1s2lnyPfKlFL7SOYUL2T5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">全新未住 · 嘉磐信義 · 三房雙平車視野戶</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,988</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">12F / 14F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">58.765 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">24.669 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">2.0 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B2-65、66</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">21.504 坪 (雙車位)</span></div>
+        </div>
+        <div class="card-address">台中市潭子區弘仁街</div>
+        <a class="card-cta" href="https://x.ychouse.tw/8xJLsc" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="c-xianglin">
+  <div class="section-header">
+    <h2 class="section-title">鄉林天韻</h2>
+    <div class="section-meta">屋齡 5.6 年 · <strong>1 戶可選</strong> · 1,798 萬</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCt2a-iySfuI8CctQbHGar2fbTPhDjvff1TWa1luSBp7G09xouZkeh5TqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQWg_V0oVlpvngpcihnY5PAz5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">近好市多鄉林天韻全新未住三房平車</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,798</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">4F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">50.407 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">27.942 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">5.6 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B1-29</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">8.271 坪</span></div>
+        </div>
+        <div class="card-address">台中市潭子區中山路二段 56 號</div>
+        <a class="card-cta" href="https://x.ychouse.tw/6v52CN" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="c-yinghua">
+  <div class="section-header">
+    <h2 class="section-title">原櫻崇現櫻花知殷</h2>
+    <div class="section-meta">屋齡 0.9 年 · <strong>2 戶可選</strong> · 1,798 ~ 2,088 萬</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuhHeBT1ykBMSgpCvuIPzNunS5l5XSakxCCz2CwprTE0OlUgeau2N4qqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQsZu2OGHf6on1IwmTkNi-8egw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDygFhYKnqWbJ8S20aGg0qP6LY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">頭家國小 · 全新櫻花三房平車 · 朝南好住 近漢神百貨</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,798</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">8F / 12F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">46.414 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.715 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">0.9 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B2-38</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">8.457 坪</span></div>
+        </div>
+        <div class="card-address">台中市潭子區頭家路</div>
+        <a class="card-cta" href="https://x.ychouse.tw/6JcZHh" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvs5msdmnLT2Ew2asuza6pCzYed7wDWdCCNoP7sZon71Ie6hKQhd2KYzhxlNAx_tGVI54tDXXIxDa64od0jAbOZrBTGt_NC0NxMCtyFz-LqpYF32GTxpmDwu98NT3cksTOdfCdPPdyK1-QhnSu_0jfkhBSYTdU66sDZWrFWv41-C6JqncOvTMXkRTN0yh9sNLwbEis8iAdARGfcIjHhQUn2VzJuUfrwrUT1VvvdLJYPKIcXUG-O_kpjl6t09yN-_CZjXthpPS02sD2VM3YRYuFYDrVkvPbncUXGa9CO-bbBrxCIATOShhyL5f4KHQywaRs&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">櫻花知殷3房雙平車 · 贈家電</div>
+        <div class="card-price-row">
+          <div><span class="card-price">2,088</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">6F / 12F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">54.871 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.715 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">0.9 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B2-11、12</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">16.914 坪 (雙車位)</span></div>
+        </div>
+        <div class="card-address">台中市潭子區頭家路</div>
+        <a class="card-cta" href="https://x.ychouse.tw/7K7C8n" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="c-shuntian">
+  <div class="section-header">
+    <h2 class="section-title">順天豐華</h2>
+    <div class="section-meta">屋齡 2.2 年 · <strong>2 戶可選</strong> · 1,888 ~ 1,888 萬</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuDxjRRR6OfE8JrJ1BOzfdGMhl-WhIqWllPZIOErWSXbab1rGHdFlvHqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQk83GqLKLbeS-u9kMCwtoOD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">潭子科技園區 · 漢神百貨 · 順天豐華百萬裝潢柱邊平車</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,888</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">8F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">46.074 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.286 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">2.2 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B2-105</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
+        </div>
+        <div class="card-address">台中市潭子區潭富路二段</div>
+        <a class="card-cta" href="https://x.ychouse.tw/6mDF5p" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsevh8zhUkifZ0HDxuGWApQFdUFrGcZRWSvYx6u25f_9S9fXFHWR4dMqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQruh-Gt23mTzaYgmqa__ngegw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyi3wg35ouV8FoHZT8yr3UuFY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">矽品【順天豐華】朝南 · 全新未住 · 三房平車 · 近漢神</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,888</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">12F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">45.34 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">24.796 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">2.2 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B2-200</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">8.342 坪</span></div>
+        </div>
+        <div class="card-address">台中市潭子區潭富路二段 189 號</div>
+        <a class="card-cta" href="https://x.ychouse.tw/5NW73s" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="c-jiahua">
+  <div class="section-header">
+    <h2 class="section-title">佳鏵大聯盟</h2>
+    <div class="section-meta">屋齡 4.7 年 · <strong>1 戶可選</strong> · 1,888 萬</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCstymeoj2y9LmNOTeu9-8ZLDCfGvfvofpcAFDw4FHQlsObr8bh4EQQIqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQYOelNIT6KlCgdiIXq_3MZT5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">漢神洲際旁次頂樓無限視野三房平車公園宅</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,888</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">12F / 13F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">50.206 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.982 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">4.7 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B3-18</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">11.554 坪</span></div>
+        </div>
+        <div class="card-address">台中市潭子區大富路一段 7 之 1 號</div>
+        <a class="card-cta" href="https://x.ychouse.tw/79Q6NX" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="c-ruixiang">
+  <div class="section-header">
+    <h2 class="section-title">睿嚮大涵</h2>
+    <div class="section-meta">屋齡 0.3 年 · <strong>1 戶可選</strong> · 1,950 萬</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image" style="background-image: url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCt6OkBO9Ga0Z--xbqnL_l51sM6bhR5RoA01acv9DJEwMMmdKW35eIAyqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQOerGW0pNKhOBor3t2Wdcdsohgr466lsI4410yCnS-aWhaOX14HxVIoF32GTxpmDwGxMlI18IRVxIy2X-UAQjyOCJA3ec-FQkdueZRv9Xnx_fItMeHEVO91KIji3F260JI5_ppXLzN94la6gGkM8dkaoiQYqC8UZwJGjuTa3QziE&width=600&height=450');"></div>
+      <div class="card-content">
+        <div class="card-tagline">睿嚮大涵邊間兩面採光三房平車視野戶</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,950</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">6F / 15F</div>
+        </div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">45.457 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">24.751 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">0.3 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道平面 B2-43</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
+        </div>
+        <div class="card-address">台中市潭子區弘福街 128 號</div>
+        <a class="card-cta" href="https://x.ychouse.tw/7s2RWh" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-title">陳 景 泰</div>
+    <div class="footer-subtitle">有巢氏房屋台中世界之心加盟店</div>
+    <div class="footer-contact">
+      <a class="contact-item" href="tel:0920118756"><span class="contact-icon">📞</span><span>0920-118-756</span></a>
+      <a class="contact-item" href="https://line.me/ti/p/~sky811117" target="_blank"><span class="contact-icon">💬</span><span>LINE：sky811117</span></a>
+      <a class="contact-item" href="https://instagram.com/sky817" target="_blank"><span class="contact-icon">📷</span><span>IG：@sky817</span></a>
+    </div>
+    <div class="footer-license">
+      不動產經紀人 黃永隆 證號 113彰縣字第324號<br>
+      不動產營業員 陳景泰 證號 114年登字第488296號<br>
+      一品不動產經紀股份有限公司<br>
+      本資訊以實際物件現況為準，最終以雙方議定條件為憑
+    </div>
+    <div class="footer-date">本頁產出日期：2026.05.05</div>
+  </div>
+</footer>
+
+</body>
+</html>
