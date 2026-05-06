@@ -106,6 +106,9 @@
   .age-nav-chip { background: rgba(139,115,85,0.06); border-color: rgba(139,115,85,0.4); color: var(--wood-deep); }
   .age-nav-chip:hover { background: var(--wood-deep); color: #FFF; border-color: var(--wood-deep); }
   .age-nav-chip.active { background: var(--wood-deep); color: #FFF; border-color: var(--wood-deep); }
+  .parking-nav-chip { background: rgba(6,199,85,0.06); border-color: rgba(6,199,85,0.4); color: #1f8a4a; }
+  .parking-nav-chip:hover { background: #1f8a4a; color: #FFF; border-color: #1f8a4a; }
+  .parking-nav-chip.active { background: #1f8a4a; color: #FFF; border-color: #1f8a4a; }
   .filter-chip { cursor: pointer; user-select: none; }
   .filter-reset { background: var(--accent); color: #FFF; border-color: var(--accent); }
   .filter-reset:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
@@ -285,6 +288,7 @@
     <a class="nav-chip age-nav-chip filter-chip" data-filter-age="15-20">15-20 年<span class="nav-chip-count">10</span></a>
     <a class="nav-chip age-nav-chip filter-chip" data-filter-age="20-25">20-25 年<span class="nav-chip-count">11</span></a>
     <a class="nav-chip age-nav-chip filter-chip" data-filter-age="25-30">25-30 年<span class="nav-chip-count">11</span></a></div>
+  
   <div class="filter-summary" id="filter-summary" style="display:none"></div>
 </nav>
 
@@ -303,7 +307,7 @@
         <div class="community-meta">1 戶 · 598 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="西屯區" data-price-tier="lt800" data-age-tier="25-30" data-community="生活故事">
+    <div class="card" data-district="西屯區" data-price-tier="lt800" data-age-tier="25-30" data-parking="yes" data-community="生活故事">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCv_VbYqzSvUwWoreutliKS7-ZeIm0sikWiJKjwwlzLFocz_Hh47f7ukqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQc2WNDgHX1EC-u9kMCwtoOD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">東海商圈工業區旁3房公寓入門玄關</div>
@@ -333,7 +337,7 @@
         <div class="community-meta">2 戶 · 798 ~ 850 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="西屯區" data-price-tier="lt800" data-age-tier="25-30" data-community="中科里仁/中科新城/國安國宅乙區">
+    <div class="card" data-district="西屯區" data-price-tier="lt800" data-age-tier="25-30" data-parking="yes" data-community="中科里仁/中科新城/國安國宅乙區">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsHqppcMcKG_2CdEvxkfsxW-trLCSxywcaMqBC3-unb3B2ata8adW3PqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQM2v7fGddxBKB5FH7_FCswj5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">IKEA_______西屯國安國宅_大兩房附平車</div>
@@ -355,7 +359,7 @@
       </div>
     </div>
 
-    <div class="card" data-district="西屯區" data-price-tier="800-1200" data-age-tier="25-30" data-community="中科里仁/中科新城/國安國宅乙區">
+    <div class="card" data-district="西屯區" data-price-tier="800-1200" data-age-tier="25-30" data-parking="yes" data-community="中科里仁/中科新城/國安國宅乙區">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCujio7tenQV5AXxWueYvesfdfL6iq-d0GNvm_nETmmT-Ruh5HAIqpusqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQrXGHRWWBXM2gdiIXq_3MZT5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">西屯中科精美低管理費無障礙★3房+平車位</div>
@@ -385,7 +389,7 @@
         <div class="community-meta">1 戶 · 1,298 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="西屯區" data-price-tier="1200-1500" data-age-tier="25-30" data-community="萬紫千紅">
+    <div class="card" data-district="西屯區" data-price-tier="1200-1500" data-age-tier="25-30" data-parking="yes" data-community="萬紫千紅">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvSL1KreMJvqhLOOFBp6JpqCQZuc02WPB3DGUkoLxqMxtp3EChWxgpMqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQwvrCSEoUgNuB5FH7_FCswj5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">水湳市場旁 · 捷運三房平車極致露台戶</div>
@@ -415,7 +419,7 @@
         <div class="community-meta">1 戶 · 1,388 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="西屯區" data-price-tier="1200-1500" data-age-tier="25-30" data-community="大有囍事">
+    <div class="card" data-district="西屯區" data-price-tier="1200-1500" data-age-tier="25-30" data-parking="yes" data-community="大有囍事">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvIrvHO-gnEt5bEcDumP8xvqJfK1KSU0Cyu5QO3QbqQcR0YnW3sG7sZqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQsSl4H3IjeTQt7TRRcj4F3T5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">近科博館大有囍市大四房+車位</div>
@@ -445,7 +449,7 @@
         <div class="community-meta">1 戶 · 1,400 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="西屯區" data-price-tier="1200-1500" data-age-tier="25-30" data-community="富宇東方之冠">
+    <div class="card" data-district="西屯區" data-price-tier="1200-1500" data-age-tier="25-30" data-parking="yes" data-community="富宇東方之冠">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCv4o1jTQeT3EibMa498flkXBDa4cEFeI3tx4kt7IxDDdQvNswUYjyTQqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQruh-Gt23mTzaYgmqa__ngegw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyg_OquiyZhbgkcEUsm_oKSGY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">急售 · 七期市中心 · 超跑的房子 · 買大平面車位</div>
@@ -475,7 +479,7 @@
         <div class="community-meta">1 戶 · 1,498 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="西屯區" data-price-tier="1200-1500" data-age-tier="20-25" data-community="大鵬新城">
+    <div class="card" data-district="西屯區" data-price-tier="1200-1500" data-age-tier="20-25" data-parking="yes" data-community="大鵬新城">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsh4uuZSsSKHT_JuWrYGjGwuEnY6SDF8xw5nh6BK5EDelG5b8LjTzhBqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQ2T2Kts4zMOolC1oIJw-ckD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">逢甲商圈 · 大鵬新城 · 屋主急售</div>
@@ -505,7 +509,7 @@
     <h2 class="district-title">北屯區</h2>
     <div class="district-meta"><strong>30 戶</strong> · 698 ~ 1,999 萬 · 屋齡 10.2~29.8 年</div>
   </div>
-  <div class="district-communities">含 25 個社區：北台中公園城 · 我愛龍邦 · 文心威秀 · 順天香吉市 · 崇德大第 · 親家摩登A · 甜蜜部落格 · 鼎川優閣 · 班芙春泉 · 紫園 · 聖家鑫傳承 · 大城比佛利 · - · 家在e起 · 總太青境 · 總太明日 · 情定水蓮NO5 · 情定水蓮NO11 · 磐峰璞原 · 通豪高邑 · 鴻邑天青硯 · 花樣年華 · 情定水蓮NO2 · 佳泰新麗馳 · 太子道</div><div class="district-price-tiers">💰 點預算篩選：<a class="price-tier-chip filter-chip" data-filter-price="lt800">< 800 萬 <strong>2</strong></a> <a class="price-tier-chip filter-chip" data-filter-price="800-1200">800-1200 萬 <strong>8</strong></a> <a class="price-tier-chip filter-chip" data-filter-price="1200-1500">1200-1500 萬 <strong>18</strong></a> <a class="price-tier-chip filter-chip" data-filter-price="1500-2000">1500-2000 萬 <strong>2</strong></a></div>
+  <div class="district-communities">含 25 個社區：北台中公園城 · 我愛龍邦 · 文心威秀 · 順天香吉市 · 親家摩登A · 班芙春泉 · 甜蜜部落格 · 崇德大第 · 鼎川優閣 · 紫園 · - · 大城比佛利 · 聖家鑫傳承 · 家在e起 · 總太青境 · 總太明日 · 情定水蓮NO5 · 情定水蓮NO11 · 通豪高邑 · 磐峰璞原 · 鴻邑天青硯 · 花樣年華 · 情定水蓮NO2 · 佳泰新麗馳 · 太子道</div><div class="district-price-tiers">💰 點預算篩選：<a class="price-tier-chip filter-chip" data-filter-price="lt800">< 800 萬 <strong>2</strong></a> <a class="price-tier-chip filter-chip" data-filter-price="800-1200">800-1200 萬 <strong>8</strong></a> <a class="price-tier-chip filter-chip" data-filter-price="1200-1500">1200-1500 萬 <strong>18</strong></a> <a class="price-tier-chip filter-chip" data-filter-price="1500-2000">1500-2000 萬 <strong>2</strong></a></div>
   
     <div class="community-sub" data-district="北屯區" data-community="北台中公園城">
       <div class="community-header">
@@ -513,7 +517,7 @@
         <div class="community-meta">2 戶 · 698 ~ 760 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="lt800" data-age-tier="20-25" data-community="北台中公園城">
+    <div class="card" data-district="北屯區" data-price-tier="lt800" data-age-tier="20-25" data-parking="yes" data-community="北台中公園城">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtBw1xxUZfdgsFqopZgM77nkTapc-XZesQZsURBJsVs-rzxqjnMXXS3qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQAwr8o2_QvVegdiIXq_3MZT5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">北台中公園城</div>
@@ -535,7 +539,7 @@
       </div>
     </div>
 
-    <div class="card" data-district="北屯區" data-price-tier="lt800" data-age-tier="20-25" data-community="北台中公園城">
+    <div class="card" data-district="北屯區" data-price-tier="lt800" data-age-tier="20-25" data-parking="yes" data-community="北台中公園城">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvscoXW3dFm2q5VLYZSag_PKv4nqWZN8f8EpTXVVap5wkUrp_GhUbC8qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQGl0o-_JBnSYt7TRRcj4F3T5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">獨賣🍎松竹商圈震後鋼骨美寓~3房三面採光</div>
@@ -565,7 +569,7 @@
         <div class="community-meta">1 戶 · 1,058 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="25-30" data-community="我愛龍邦">
+    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="25-30" data-parking="yes" data-community="我愛龍邦">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuTDeVZ-f2FmkssAZEiZ0Ir1nC0KDHMDPhe95dAbqPhx7YGK4AU6XeSqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQ8qnshIuvKFWB5FH7_FCswj5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">我愛龍邦高樓美視野近文心崇德捷運2+1房休旅車位</div>
@@ -595,7 +599,7 @@
         <div class="community-meta">2 戶 · 1,138 ~ 1,358 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="20-25" data-community="文心威秀">
+    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="20-25" data-parking="yes" data-community="文心威秀">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtBBIwbdQ_c_4-_Y2jK0Y3tD7_CyrxpFNTviITTCAgpl64Y_tMmoeKnqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQxhKMZm57BKslC1oIJw-ckD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">四維國小捷運宅.3房+機上休旅車位(文心威秀)</div>
@@ -617,7 +621,7 @@
       </div>
     </div>
 
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="20-25" data-community="文心威秀">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="20-25" data-parking="yes" data-community="文心威秀">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsx78YtJRcu56-GLfuiqijWlbvW5cPNvOscknnJl6-0M4e6hKQhd2KYzhxlNAx_tGVI54tDXXIxDa64od0jAbOZrBTGt_NC0NxMCtyFz-LqpYF32GTxpmDwu98NT3cksTOdfCdPPdyK1-QhnSu_0jfkhBSYTdU66sDZWrFWv41-C6JqncOvTMXkRTN0yh9sNLwbEis8iAdARGfcIjHhQUn2c7xNLBq2wEz5g7yUgAJsCgRXKWm7Zt7bq1UZZePl-UOQozxW9-AYawXFxrrYnkCPC-2-JrTnCjQCxnJa4F1GheY7pfvjQDHBPFqQAwVdsj7ewnd0Um5CPyKdPDBj1NBu1cH_Mn4kkL6WY4R5ZaHad-dHXJf7kXORmj2QXgWiX9kzOszrBYU5Uw&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">新青安最後倒數視野戶~文心威秀捷運宅3+1房平車</div>
@@ -647,7 +651,7 @@
         <div class="community-meta">1 戶 · 1,168 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="25-30" data-community="順天香吉市">
+    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="25-30" data-parking="yes" data-community="順天香吉市">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCv2D_Rha42_js9jbPnnAaq2fAhvD33Ne4nd8SjETPKAsQwr9H69LghWqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQruh-Gt23mTzaYgmqa__ngegw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyiy0MMbkqo_B6TfhcpldGNfY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">順天香吉市方正美3+1房採光通風佳大平車稀有釋出</div>
@@ -671,43 +675,13 @@
       </div>
     </div>
 
-    <div class="community-sub" data-district="北屯區" data-community="崇德大第">
-      <div class="community-header">
-        <h3 class="community-title">崇德大第</h3>
-        <div class="community-meta">1 戶 · 1,198 萬</div>
-      </div>
-      <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="25-30" data-community="崇德大第">
-      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvP2lM1_vcQliXy43m-vr0HdFlK6lbkDpUhFqgCx8C0kDflYH-BjytVqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQEgBGSAr77ceB5FH7_FCswj5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
-      <div class="card-content">
-        <div class="card-tagline">崇德國中民俗公園旁低總價崇德大第採光三房休旅車位</div>
-        <div class="card-price-row">
-          <div><span class="card-price">1,198</span><span class="card-price-unit">萬 含車位</span></div>
-          <div class="card-floor">7F / 14F</div>
-        </div>
-        <div class="card-unit-price">單坪 <strong>46.99</strong> 萬 / 主建坪</div>
-        <div class="card-spec">
-          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">43.166 坪</span></div>
-          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.495 坪</span></div>
-          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
-          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">28.2 年</span></div>
-          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/機械 -</span></div>
-          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
-        </div>
-        <div class="card-address">台中市北屯區大連路二段</div>
-        <a class="card-cta" href="https://x.ychouse.tw/73SvNR" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
-      </div>
-    </div>
-      </div>
-    </div>
-
     <div class="community-sub" data-district="北屯區" data-community="親家摩登A">
       <div class="community-header">
         <h3 class="community-title">親家摩登A</h3>
         <div class="community-meta">1 戶 · 1,198 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="25-30" data-community="親家摩登A">
+    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="25-30" data-parking="yes" data-community="親家摩登A">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCu8aCeLpNNnHyGUegdQ0oVwjDZfpLKW9qJjoEBflhDW4hWfWokxMb3mqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQruh-Gt23mTzaYgmqa__ngegw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyjpM98urjOdi-6BvDc_y5sKY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">正太原路商圈太原綠園道三房平面車位全新整理</div>
@@ -731,73 +705,13 @@
       </div>
     </div>
 
-    <div class="community-sub" data-district="北屯區" data-community="甜蜜部落格">
-      <div class="community-header">
-        <h3 class="community-title">甜蜜部落格</h3>
-        <div class="community-meta">1 戶 · 1,198 萬</div>
-      </div>
-      <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="15-20" data-community="甜蜜部落格">
-      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCs6FM5bubd3LNZHpurotDTcx2aBAQslXTS39U5lxPA_FJzpHmNfDEZNqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQxyQbugJ4ojAUSu0-0b3RzD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
-      <div class="card-content">
-        <div class="card-tagline">專任-熱河 · 大連 · 崇德商圈大兩房+休旅車位</div>
-        <div class="card-price-row">
-          <div><span class="card-price">1,198</span><span class="card-price-unit">萬 含車位</span></div>
-          <div class="card-floor">2F / 12F</div>
-        </div>
-        <div class="card-unit-price">單坪 <strong>58.35</strong> 萬 / 主建坪</div>
-        <div class="card-spec">
-          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">35.877 坪</span></div>
-          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">20.531 坪</span></div>
-          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
-          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">15.9 年</span></div>
-          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/機械 -</span></div>
-          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">6.744 坪</span></div>
-        </div>
-        <div class="card-address">台中市北屯區松和街</div>
-        <a class="card-cta" href="https://x.ychouse.tw/94HSXq" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
-      </div>
-    </div>
-      </div>
-    </div>
-
-    <div class="community-sub" data-district="北屯區" data-community="鼎川優閣">
-      <div class="community-header">
-        <h3 class="community-title">鼎川優閣</h3>
-        <div class="community-meta">1 戶 · 1,198 萬</div>
-      </div>
-      <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="lt15" data-community="鼎川優閣">
-      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtdNoLE01KYm7PzH20D6Y8Qd2kn3DM3DKJvp6_3dD-_midWrol0kJcyqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQgUCnbIqEjYMt7TRRcj4F3T5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
-      <div class="card-content">
-        <div class="card-tagline">中國醫BOT輕屋齡三房車位</div>
-        <div class="card-price-row">
-          <div><span class="card-price">1,198</span><span class="card-price-unit">萬 含車位</span></div>
-          <div class="card-floor">3F / 7F</div>
-        </div>
-        <div class="card-unit-price">單坪 <strong>47.67</strong> 萬 / 主建坪</div>
-        <div class="card-spec">
-          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">41.896 坪</span></div>
-          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.132 坪</span></div>
-          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
-          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">11.1 年</span></div>
-          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/機械 B2-15</span></div>
-          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">7.867 坪</span></div>
-        </div>
-        <div class="card-address">台中市北屯區祥順一街</div>
-        <a class="card-cta" href="https://x.ychouse.tw/64yZ6v" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
-      </div>
-    </div>
-      </div>
-    </div>
-
     <div class="community-sub" data-district="北屯區" data-community="班芙春泉">
       <div class="community-header">
         <h3 class="community-title">班芙春泉</h3>
         <div class="community-meta">1 戶 · 1,198 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="15-20" data-community="班芙春泉">
+    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="15-20" data-parking="yes" data-community="班芙春泉">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtb-cVo8dw4m_nkHG8jnxpKAqHFXsDTP9G7lfc1VZu3IPzDo8dzBgXeqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQG16X0zil9e9L4uRSUmSB6z5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">太原vs軍功路口_雙十年華_極優兩房坡平車</div>
@@ -821,13 +735,103 @@
       </div>
     </div>
 
+    <div class="community-sub" data-district="北屯區" data-community="甜蜜部落格">
+      <div class="community-header">
+        <h3 class="community-title">甜蜜部落格</h3>
+        <div class="community-meta">1 戶 · 1,198 萬</div>
+      </div>
+      <div class="grid">
+    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="15-20" data-parking="yes" data-community="甜蜜部落格">
+      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCs6FM5bubd3LNZHpurotDTcx2aBAQslXTS39U5lxPA_FJzpHmNfDEZNqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQxyQbugJ4ojAUSu0-0b3RzD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
+      <div class="card-content">
+        <div class="card-tagline">專任-熱河 · 大連 · 崇德商圈大兩房+休旅車位</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,198</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">2F / 12F</div>
+        </div>
+        <div class="card-unit-price">單坪 <strong>58.35</strong> 萬 / 主建坪</div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">35.877 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">20.531 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">15.9 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/機械 -</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">6.744 坪</span></div>
+        </div>
+        <div class="card-address">台中市北屯區松和街</div>
+        <a class="card-cta" href="https://x.ychouse.tw/94HSXq" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    <div class="community-sub" data-district="北屯區" data-community="崇德大第">
+      <div class="community-header">
+        <h3 class="community-title">崇德大第</h3>
+        <div class="community-meta">1 戶 · 1,198 萬</div>
+      </div>
+      <div class="grid">
+    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="25-30" data-parking="yes" data-community="崇德大第">
+      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvP2lM1_vcQliXy43m-vr0HdFlK6lbkDpUhFqgCx8C0kDflYH-BjytVqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQEgBGSAr77ceB5FH7_FCswj5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
+      <div class="card-content">
+        <div class="card-tagline">崇德國中民俗公園旁低總價崇德大第採光三房休旅車位</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,198</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">7F / 14F</div>
+        </div>
+        <div class="card-unit-price">單坪 <strong>46.99</strong> 萬 / 主建坪</div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">43.166 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.495 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">28.2 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/機械 -</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
+        </div>
+        <div class="card-address">台中市北屯區大連路二段</div>
+        <a class="card-cta" href="https://x.ychouse.tw/73SvNR" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    <div class="community-sub" data-district="北屯區" data-community="鼎川優閣">
+      <div class="community-header">
+        <h3 class="community-title">鼎川優閣</h3>
+        <div class="community-meta">1 戶 · 1,198 萬</div>
+      </div>
+      <div class="grid">
+    <div class="card" data-district="北屯區" data-price-tier="800-1200" data-age-tier="lt15" data-parking="yes" data-community="鼎川優閣">
+      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtdNoLE01KYm7PzH20D6Y8Qd2kn3DM3DKJvp6_3dD-_midWrol0kJcyqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQgUCnbIqEjYMt7TRRcj4F3T5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
+      <div class="card-content">
+        <div class="card-tagline">中國醫BOT輕屋齡三房車位</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,198</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">3F / 7F</div>
+        </div>
+        <div class="card-unit-price">單坪 <strong>47.67</strong> 萬 / 主建坪</div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">41.896 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.132 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">11.1 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/機械 B2-15</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">7.867 坪</span></div>
+        </div>
+        <div class="card-address">台中市北屯區祥順一街</div>
+        <a class="card-cta" href="https://x.ychouse.tw/64yZ6v" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+      </div>
+    </div>
+
     <div class="community-sub" data-district="北屯區" data-community="紫園">
       <div class="community-header">
         <h3 class="community-title">紫園</h3>
         <div class="community-meta">1 戶 · 1,268 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-community="紫園">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-parking="yes" data-community="紫園">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuOnZKFHGaUM8AouKzinFlih8JgRPiN4VciZRrSxM2K3o8NoJRRKwfQqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQWJ7dPixvNv-gdiIXq_3MZT5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">專任🔥紫園北屯東山國小旁稀有三房+B1平車</div>
@@ -851,73 +855,13 @@
       </div>
     </div>
 
-    <div class="community-sub" data-district="北屯區" data-community="聖家鑫傳承">
-      <div class="community-header">
-        <h3 class="community-title">聖家鑫傳承</h3>
-        <div class="community-meta">1 戶 · 1,298 萬</div>
-      </div>
-      <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-community="聖家鑫傳承">
-      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCujby8SuNKCbnLmIdjWehXGvQlbwM2e4N5H4hWpVTBiXvw8o8De15omqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQPOuLXSMA1RMUSu0-0b3RzD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
-      <div class="card-content">
-        <div class="card-tagline">廍子國小大三房視野戶BOT送平車</div>
-        <div class="card-price-row">
-          <div><span class="card-price">1,298</span><span class="card-price-unit">萬 含車位</span></div>
-          <div class="card-floor">9F / 12F</div>
-        </div>
-        <div class="card-unit-price">單坪 <strong>51.16</strong> 萬 / 主建坪</div>
-        <div class="card-spec">
-          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">45.059 坪</span></div>
-          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.37 坪</span></div>
-          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
-          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">0.0 年</span></div>
-          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/平面 B1-47</span></div>
-          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">7.8 坪</span></div>
-        </div>
-        <div class="card-address">台中市北屯區太和東街</div>
-        <a class="card-cta" href="https://x.ychouse.tw/7TWF5x" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
-      </div>
-    </div>
-      </div>
-    </div>
-
-    <div class="community-sub" data-district="北屯區" data-community="大城比佛利">
-      <div class="community-header">
-        <h3 class="community-title">大城比佛利</h3>
-        <div class="community-meta">1 戶 · 1,298 萬</div>
-      </div>
-      <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-community="大城比佛利">
-      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuHS5ZqIBUQoznCbKvR9dnAbkqv5H2QLeUsyUbUXPOTm2K0PzIYRh9hqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQuzUF3bpO_HOlFL7SOYUL2T5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
-      <div class="card-content">
-        <div class="card-tagline">大城比佛利 · 決心售東山學區 · 次頂樓三房休旅車位</div>
-        <div class="card-price-row">
-          <div><span class="card-price">1,298</span><span class="card-price-unit">萬 含車位</span></div>
-          <div class="card-floor">14F / 15F</div>
-        </div>
-        <div class="card-unit-price">單坪 <strong>55.39</strong> 萬 / 主建坪</div>
-        <div class="card-spec">
-          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">38.614 坪</span></div>
-          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">23.435 坪</span></div>
-          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
-          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">16.8 年</span></div>
-          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/機械 B3-82</span></div>
-          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
-        </div>
-        <div class="card-address">台中市北屯區太原路三段</div>
-        <a class="card-cta" href="https://x.ychouse.tw/7L9fWs" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
-      </div>
-    </div>
-      </div>
-    </div>
-
     <div class="community-sub" data-district="北屯區" data-community="-">
       <div class="community-header">
         <h3 class="community-title">-</h3>
         <div class="community-meta">1 戶 · 1,298 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="25-30" data-community="-">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="25-30" data-parking="yes" data-community="-">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuh4epg7_dpAqgeUWKRdPJkGwuleZWFhzf5q4ss8bk4Df4UksA_DXa1qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQ7_nxeOWi8GugdiIXq_3MZT5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">緊鄰一點利市場 · 稀有四房 · 雙車大露台</div>
@@ -941,13 +885,73 @@
       </div>
     </div>
 
+    <div class="community-sub" data-district="北屯區" data-community="大城比佛利">
+      <div class="community-header">
+        <h3 class="community-title">大城比佛利</h3>
+        <div class="community-meta">1 戶 · 1,298 萬</div>
+      </div>
+      <div class="grid">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-parking="yes" data-community="大城比佛利">
+      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuHS5ZqIBUQoznCbKvR9dnAbkqv5H2QLeUsyUbUXPOTm2K0PzIYRh9hqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQuzUF3bpO_HOlFL7SOYUL2T5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
+      <div class="card-content">
+        <div class="card-tagline">大城比佛利 · 決心售東山學區 · 次頂樓三房休旅車位</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,298</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">14F / 15F</div>
+        </div>
+        <div class="card-unit-price">單坪 <strong>55.39</strong> 萬 / 主建坪</div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">38.614 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">23.435 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">16.8 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/機械 B3-82</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
+        </div>
+        <div class="card-address">台中市北屯區太原路三段</div>
+        <a class="card-cta" href="https://x.ychouse.tw/7L9fWs" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    <div class="community-sub" data-district="北屯區" data-community="聖家鑫傳承">
+      <div class="community-header">
+        <h3 class="community-title">聖家鑫傳承</h3>
+        <div class="community-meta">1 戶 · 1,298 萬</div>
+      </div>
+      <div class="grid">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-parking="yes" data-community="聖家鑫傳承">
+      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCujby8SuNKCbnLmIdjWehXGvQlbwM2e4N5H4hWpVTBiXvw8o8De15omqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQPOuLXSMA1RMUSu0-0b3RzD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
+      <div class="card-content">
+        <div class="card-tagline">廍子國小大三房視野戶BOT送平車</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,298</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">9F / 12F</div>
+        </div>
+        <div class="card-unit-price">單坪 <strong>51.16</strong> 萬 / 主建坪</div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">45.059 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.37 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">0.0 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/平面 B1-47</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">7.8 坪</span></div>
+        </div>
+        <div class="card-address">台中市北屯區太和東街</div>
+        <a class="card-cta" href="https://x.ychouse.tw/7TWF5x" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+      </div>
+    </div>
+
     <div class="community-sub" data-district="北屯區" data-community="家在e起">
       <div class="community-header">
         <h3 class="community-title">家在e起</h3>
         <div class="community-meta">1 戶 · 1,298 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-community="家在e起">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-parking="yes" data-community="家在e起">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCv6JNKWH82I-7A5TuujvtTDOC8HB9_2BxlTq78lyaXMvlLdmpw1gr9zqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQ9hCcmVNrPIa-u9kMCwtoOD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">家在e起軍功生活商圈精美兩房平車</div>
@@ -977,7 +981,7 @@
         <div class="community-meta">2 戶 · 1,338 ~ 1,398 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-community="總太青境">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-parking="yes" data-community="總太青境">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCt0SjKya83_xk33qqoABQqK5TFlx3lFGnq6F7Y3BJaGdLyrXAh5RCZ1qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQruh-Gt23mTzaYgmqa__ngegw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyhsdMGO8ScX_q7iaqzwcP7vY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">專任總太青境中高樓層3房B1柱邊平車</div>
@@ -999,7 +1003,7 @@
       </div>
     </div>
 
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-community="總太青境">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-parking="yes" data-community="總太青境">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvGIBCYBUV-aWxtDIcsnfa_pA0qPIlofqsSAop5xP4FDVwnGd-3VhAZqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQMPYfJ9A-wXBiJfhSR4_g2z5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">️超低總價⚠️景緻幸福屋⚠️北屯中國醫三房視野</div>
@@ -1029,7 +1033,7 @@
         <div class="community-meta">2 戶 · 1,338 ~ 1,380 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-community="總太明日">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-parking="yes" data-community="總太明日">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsv17mc857vXeDeX8tfa3ocsQrXp0WzhiBjQVarUc1NhF9A7T0_V4OKqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQkyit0cjt1hyB5FH7_FCswj5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">專任北屯總太明日稀有面河岸三房平車</div>
@@ -1051,7 +1055,7 @@
       </div>
     </div>
 
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-community="總太明日">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-parking="yes" data-community="總太明日">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuVrb24cNetiy6nI8PO810GyU7rzmOMaQ3W3pB4gBJa9BfMW9XzVsChqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQGHa_ZRskEyaB5FH7_FCswj5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">北屯中國醫無限視野中高樓層大三房</div>
@@ -1081,7 +1085,7 @@
         <div class="community-meta">1 戶 · 1,358 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-community="情定水蓮NO5">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-parking="yes" data-community="情定水蓮NO5">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuxmRiJIETBCWp6LRla3Frz0Tus6QzT71naDLw2_yrgXZKbUWplXsaQqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQN5GwhVyfm0u-u9kMCwtoOD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">情定水蓮NO5 · 北屯十期葳格中學旁精裝三房車位</div>
@@ -1111,7 +1115,7 @@
         <div class="community-meta">1 戶 · 1,388 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-community="情定水蓮NO11">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-parking="yes" data-community="情定水蓮NO11">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvBnWvZZbG_JVts9rpmyshaE_bnDX4QuRvu_q1fqLDghHZY2A2Td6cgqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQ_GQeHteSnS9iJfhSR4_g2z5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">!情定水蓮-三房平車質感樹梢戶!</div>
@@ -1135,43 +1139,13 @@
       </div>
     </div>
 
-    <div class="community-sub" data-district="北屯區" data-community="磐峰璞原">
-      <div class="community-header">
-        <h3 class="community-title">磐峰璞原</h3>
-        <div class="community-meta">1 戶 · 1,398 萬</div>
-      </div>
-      <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-community="磐峰璞原">
-      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvESWb-LaSQZD-4iWeGURklpdqjEKOxV8HeA0WwDgb8xSgs1GChx8NVqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQKU26384gCmeB5FH7_FCswj5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
-      <div class="card-content">
-        <div class="card-tagline">十期生態公園旁美三房 · 磐峰璞原 · 三房視野戶平車</div>
-        <div class="card-price-row">
-          <div><span class="card-price">1,398</span><span class="card-price-unit">萬 含車位</span></div>
-          <div class="card-floor">9F / 12F</div>
-        </div>
-        <div class="card-unit-price">單坪 <strong>54.86</strong> 萬 / 主建坪</div>
-        <div class="card-spec">
-          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">44.825 坪</span></div>
-          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.483 坪</span></div>
-          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
-          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">10.2 年</span></div>
-          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/平面 B1-71</span></div>
-          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">7.034 坪</span></div>
-        </div>
-        <div class="card-address">台中市北屯區祥順六街</div>
-        <a class="card-cta" href="https://x.ychouse.tw/7HspqK" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
-      </div>
-    </div>
-      </div>
-    </div>
-
     <div class="community-sub" data-district="北屯區" data-community="通豪高邑">
       <div class="community-header">
         <h3 class="community-title">通豪高邑</h3>
         <div class="community-meta">2 戶 · 1,398 ~ 1,488 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-community="通豪高邑">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-parking="yes" data-community="通豪高邑">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsUK0BkyJA3VXRwXQezGUp7pp0z0dKDMOQ99nm0pMVp2ANXevzix3jdqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQD429u227XwSlFL7SOYUL2T5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">北屯 · 通豪高邑 · 精裝3改2房休旅車位</div>
@@ -1193,7 +1167,7 @@
       </div>
     </div>
 
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-community="通豪高邑">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-parking="yes" data-community="通豪高邑">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtPTBPntL79BbVOpbktGcMMwgPkOMeXfBj_AOyUA0feH9wBUwnzaDDjqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQruh-Gt23mTzaYgmqa__ngegw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyg_Ke8_o5BrKHfA0a8nKVHhY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">通豪高邑三房車位屋況佳</div>
@@ -1217,13 +1191,43 @@
       </div>
     </div>
 
+    <div class="community-sub" data-district="北屯區" data-community="磐峰璞原">
+      <div class="community-header">
+        <h3 class="community-title">磐峰璞原</h3>
+        <div class="community-meta">1 戶 · 1,398 萬</div>
+      </div>
+      <div class="grid">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-parking="yes" data-community="磐峰璞原">
+      <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvESWb-LaSQZD-4iWeGURklpdqjEKOxV8HeA0WwDgb8xSgs1GChx8NVqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQKU26384gCmeB5FH7_FCswj5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
+      <div class="card-content">
+        <div class="card-tagline">十期生態公園旁美三房 · 磐峰璞原 · 三房視野戶平車</div>
+        <div class="card-price-row">
+          <div><span class="card-price">1,398</span><span class="card-price-unit">萬 含車位</span></div>
+          <div class="card-floor">9F / 12F</div>
+        </div>
+        <div class="card-unit-price">單坪 <strong>54.86</strong> 萬 / 主建坪</div>
+        <div class="card-spec">
+          <div class="spec-item"><span class="spec-label">權狀坪數</span><span class="spec-value highlight">44.825 坪</span></div>
+          <div class="spec-item"><span class="spec-label">主+附</span><span class="spec-value">25.483 坪</span></div>
+          <div class="spec-item"><span class="spec-label">格局</span><span class="spec-value">3房2廳2衛</span></div>
+          <div class="spec-item"><span class="spec-label">屋齡</span><span class="spec-value">10.2 年</span></div>
+          <div class="spec-item"><span class="spec-label">車位</span><span class="spec-value">坡道/平面 B1-71</span></div>
+          <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">7.034 坪</span></div>
+        </div>
+        <div class="card-address">台中市北屯區祥順六街</div>
+        <a class="card-cta" href="https://x.ychouse.tw/7HspqK" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
+      </div>
+    </div>
+      </div>
+    </div>
+
     <div class="community-sub" data-district="北屯區" data-community="鴻邑天青硯">
       <div class="community-header">
         <h3 class="community-title">鴻邑天青硯</h3>
         <div class="community-meta">1 戶 · 1,428 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-community="鴻邑天青硯">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-parking="yes" data-community="鴻邑天青硯">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCugAqpCLEqewKuWPMC0tYYsmJfPaKfbrEyhxb0ISP_iC4e6hKQhd2KYzhxlNAx_tGVI54tDXXIxDa64od0jAbOZrBTGt_NC0NxMCtyFz-LqpYF32GTxpmDwu98NT3cksTOdfCdPPdyK1-QhnSu_0jfkhBSYTdU66sDZWrFWv41-C6JqncOvTMXkRTN0yh9sNLwbEis8iAdARGfcIjHhQUn2VzJuUfrwrUT1VvvdLJYPKPzgd1sRDdQo8N_qIAMT7eRjXthpPS02sD2VM3YRYuFYDrVkvPbncUXGa9CO-bbBrxCIATOShhyL5f4KHQywaRs&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">！天青硯重金打造3改2房！稀有平車裝潢戶</div>
@@ -1253,7 +1257,7 @@
         <div class="community-meta">1 戶 · 1,438 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-community="花樣年華">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="lt15" data-parking="yes" data-community="花樣年華">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuyYfmuwnWmKi-22Bf8jwhhpkHdUmk21znVFFfak4FrhGLcGsTDrPzzqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQsZu2OGHf6on1IwmTkNi-8egw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyiWHHO9r6WKwOJsXqINspkaY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">十期軍功東山雙商圈花樣年華3房平車</div>
@@ -1283,7 +1287,7 @@
         <div class="community-meta">1 戶 · 1,498 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-community="情定水蓮NO2">
+    <div class="card" data-district="北屯區" data-price-tier="1200-1500" data-age-tier="15-20" data-parking="yes" data-community="情定水蓮NO2">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsTvSQ0WZWSaYa4_-JLLKGyw0mULDK89jhOCHVUQx1e8oe6hKQhd2KYzhxlNAx_tGVI54tDXXIxDa64od0jAbOZrBTGt_NC0NxMCtyFz-LqpYF32GTxpmDwu98NT3cksTOdfCdPPdyK1-QhnSu_0jfkhBSYTdU66sDZWrFWv41-C6JqncOvTMXkRTN0yh9sNLwbEis8iAdARGfcIjHhQUn2VzJuUfrwrUT1VvvdLJYPKBBsjJMADJciGfUavOfOAQBjXthpPS02sD2VM3YRYuFYDrVkvPbncUXGa9CO-bbBrxCIATOShhyL5f4KHQywaRs&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">北屯學區宅 · 情定水蓮NO2 · 高樓層三房平車</div>
@@ -1313,7 +1317,7 @@
         <div class="community-meta">1 戶 · 1,798 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1500-2000" data-age-tier="lt15" data-community="佳泰新麗馳">
+    <div class="card" data-district="北屯區" data-price-tier="1500-2000" data-age-tier="lt15" data-parking="yes" data-community="佳泰新麗馳">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtmJ2I27Z7lqoXRCMMoqLrsrW8Ew3XmVAi8dxZhYQs8Up0OB4Okt1jaqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQmtRXcF8vH-piJfhSR4_g2z5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">十期北屯好事多威格中學旁四改大三房精裝視野戶</div>
@@ -1343,7 +1347,7 @@
         <div class="community-meta">1 戶 · 1,999 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北屯區" data-price-tier="1500-2000" data-age-tier="lt15" data-community="太子道">
+    <div class="card" data-district="北屯區" data-price-tier="1500-2000" data-age-tier="lt15" data-parking="yes" data-community="太子道">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCuCRoHpYuDKO0fCCOxxGt_Qp7_gW6UPe6fcXOZiaRyTOMCINm5y634JqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQBfe6UxkQisW-u9kMCwtoOD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">太子道 · 專任 · 四改三房裝潢戶 · 廍子學區</div>
@@ -1381,7 +1385,7 @@
         <div class="community-meta">2 戶 · 1,088 ~ 1,158 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北區" data-price-tier="800-1200" data-age-tier="20-25" data-community="大銪臻品">
+    <div class="card" data-district="北區" data-price-tier="800-1200" data-age-tier="20-25" data-parking="yes" data-community="大銪臻品">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtpDUeAoIKfs669Fjmz2IYnmji4A_vWrVIL8pjMKwjEWXkryHG7HPSVqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQgyFyR4f8Y5TgpcihnY5PAz5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">馬上看 · 北區蛋黃區 · 大兩房平車 · 中國醫X一中商圈</div>
@@ -1403,7 +1407,7 @@
       </div>
     </div>
 
-    <div class="card" data-district="北區" data-price-tier="800-1200" data-age-tier="20-25" data-community="大銪臻品">
+    <div class="card" data-district="北區" data-price-tier="800-1200" data-age-tier="20-25" data-parking="yes" data-community="大銪臻品">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvGm2YPVUAN-zJrxFuxsdZAq2jJ0pIE2Ea-8U2-QPMhuoe6hKQhd2KYzhxlNAx_tGVI54tDXXIxDa64od0jAbOZrBTGt_NC0NxMCtyFz-LqpYF32GTxpmDwu98NT3cksTOdfCdPPdyK1-QhnSu_0jfkhBSYTdU66sDZWrFWv41-C6JqncOvTMXkRTN0yh9sNLwbEis8iAdARGfcIjHhQUn2VzJuUfrwrUT1VvvdLJYPKDmf8cGcz7KAjITjsTn9Hf9jXthpPS02sD2VM3YRYuFYDrVkvPbncUXGa9CO-bbBrxCIATOShhyL5f4KHQywaRs&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">馬上看 · 北區一中X中國醫 · 稀有大兩房平車機能宅</div>
@@ -1433,7 +1437,7 @@
         <div class="community-meta">3 戶 · 1,180 ~ 1,498 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北區" data-price-tier="800-1200" data-age-tier="20-25" data-community="科博之星">
+    <div class="card" data-district="北區" data-price-tier="800-1200" data-age-tier="20-25" data-parking="yes" data-community="科博之星">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCur2UKut2RUCzSANQN7xBz4hdixG8VZfOzKJ7VSxzNlLoe6hKQhd2KYzhxlNAx_tGVI54tDXXIxDa64od0jAbOZrBTGt_NC0NxMCtyFz-LqpYF32GTxpmDwu98NT3cksTOdfCdPPdyK1-QhnSu_0jfkhBSYTdU66sDZWrFWv41-C6JqncOvTMXkRTN0yh9sNLwbEis8iAdARGfcIjHhQUn2c7xNLBq2wEz5g7yUgAJsCgRXKWm7Zt7bq1UZZePl-UOQozxW9-AYawXFxrrYnkCPC-2-JrTnCjQCxnJa4F1GheY7pfvjQDHBdijdPIBLh7Ochn8c8PA_CyKdPDBj1NBu1cH_Mn4kkL6WY4R5ZaHad-dHXJf7kXORmj2QXgWiX9kzOszrBYU5Uw&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">科博館兩房+平面車位高樓層視野戶</div>
@@ -1455,7 +1459,7 @@
       </div>
     </div>
 
-    <div class="card" data-district="北區" data-price-tier="1200-1500" data-age-tier="20-25" data-community="科博之星">
+    <div class="card" data-district="北區" data-price-tier="1200-1500" data-age-tier="20-25" data-parking="yes" data-community="科博之星">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtPnFRIzUSLRN1ZjzdwKbn52qvt881frL0mYdHTRRg0NjT56QHNp8YMqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQDvNlQYzzfWa-u9kMCwtoOD5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">科博之星🍊兩房平車獨立大車位🍊朝北面健行</div>
@@ -1477,7 +1481,7 @@
       </div>
     </div>
 
-    <div class="card" data-district="北區" data-price-tier="1200-1500" data-age-tier="20-25" data-community="科博之星">
+    <div class="card" data-district="北區" data-price-tier="1200-1500" data-age-tier="20-25" data-parking="yes" data-community="科博之星">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsK9G9scwuqG-K5sBrGXqY_PO1uIrtuzPUrLHCscZcXBs2C84BbcXu1qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQruh-Gt23mTzaYgmqa__ngegw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyj40OjNPUwHwpcrTXWWH-2RY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">科博館植物園旁 · 科博之星 · 震後採光三房平車</div>
@@ -1507,7 +1511,7 @@
         <div class="community-meta">1 戶 · 1,250 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北區" data-price-tier="1200-1500" data-age-tier="20-25" data-community="佳茂學士會館">
+    <div class="card" data-district="北區" data-price-tier="1200-1500" data-age-tier="20-25" data-parking="yes" data-community="佳茂學士會館">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCvWrDvjWIq0TAEBPEAApXD5zE2ps7evvJ5pjrD4_D4YkiKfP7CnICORqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQwZVzN6KxbaSlFL7SOYUL2T5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">稀有兩房雙車位中國醫生活圈佳茂學士會館</div>
@@ -1537,7 +1541,7 @@
         <div class="community-meta">1 戶 · 1,338 萬</div>
       </div>
       <div class="grid">
-    <div class="card" data-district="北區" data-price-tier="1200-1500" data-age-tier="15-20" data-community="佳茂文心會館">
+    <div class="card" data-district="北區" data-price-tier="1200-1500" data-age-tier="15-20" data-parking="yes" data-community="佳茂文心會館">
       <div class="card-image"><img src="https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCsnXK1Jv6uv580fl8AY63sjfcI_Nlh_XxpzVZVk4tXMkcTHdzu_UCFYqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XBAQgkkIIUok4Nc3dOPPQMQ_SnP2GUF37diJfhSR4_g2z5vZ6OflHt10bWNorW3IP1MmpuC1T4RxII9rQUntT2-JoUZRkVuMG09qnHB_xHX6A&width=600&height=450" loading="lazy" decoding="async" alt="" /></div>
       <div class="card-content">
         <div class="card-tagline">最強兩房-佳茂文心會館稀有釋出附平車</div>
@@ -1695,10 +1699,11 @@
     el.addEventListener('click', function() { trackCta('line'); });
   });
 
-  // ============== 區域 + 預算 + 屋齡 篩選邏輯 ==============
+  // ============== 區域 + 預算 + 屋齡 + 車位 篩選邏輯 ==============
   var activeDistrict = null;
   var activePrice = null;
   var activeAge = null;
+  var activeParking = null;
 
   function applyFilters() {
     var visibleCount = 0;
@@ -1706,10 +1711,12 @@
       var d = card.dataset.district;
       var p = card.dataset.priceTier;
       var a = card.dataset.ageTier;
+      var pk = card.dataset.parking;
       var match = (
         (!activeDistrict || activeDistrict === d) &&
         (!activePrice || activePrice === p) &&
-        (!activeAge || activeAge === a)
+        (!activeAge || activeAge === a) &&
+        (!activeParking || activeParking === pk)
       );
       card.style.display = match ? '' : 'none';
       if (match) visibleCount++;
@@ -1734,8 +1741,11 @@
     document.querySelectorAll('[data-filter-age]').forEach(function(c) {
       c.classList.toggle('active', c.dataset.filterAge === activeAge);
     });
+    document.querySelectorAll('[data-filter-parking]').forEach(function(c) {
+      c.classList.toggle('active', c.dataset.filterParking === activeParking);
+    });
     // Reset 按鈕 + summary 顯示
-    var any = activeDistrict || activePrice || activeAge;
+    var any = activeDistrict || activePrice || activeAge || activeParking;
     var resetBtn = document.querySelector('[data-filter-reset]');
     if (resetBtn) resetBtn.style.display = any ? '' : 'none';
     var summary = document.getElementById('filter-summary');
@@ -1750,6 +1760,9 @@
         if (activeAge) {
           var achip = document.querySelector('[data-filter-age="' + activeAge + '"]');
           parts.push('屋齡：' + (achip ? achip.textContent.replace(/\d+$/, '').trim() : activeAge));
+        }
+        if (activeParking) {
+          parts.push('車位：' + (activeParking === 'yes' ? '有車位' : '無車位'));
         }
         summary.textContent = '🔍 ' + parts.join(' + ') + ' → ' + visibleCount + ' 戶符合';
         summary.style.display = '';
@@ -1786,12 +1799,22 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
+  document.querySelectorAll('[data-filter-parking]').forEach(function(chip) {
+    chip.addEventListener('click', function(e) {
+      e.preventDefault();
+      var pk = this.dataset.filterParking;
+      activeParking = activeParking === pk ? null : pk;
+      applyFilters();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
   document.querySelectorAll('[data-filter-reset]').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
       activeDistrict = null;
       activePrice = null;
       activeAge = null;
+      activeParking = null;
       applyFilters();
     });
   });
