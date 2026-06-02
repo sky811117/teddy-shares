@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>為您挑的更多選擇</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #F5F1EB; color: #2C2C2C;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px 80px; }
+  .page-title { font-size: 28px; font-weight: 700; text-align: center; margin: 16px 0 8px; letter-spacing: 1px; }
+  .page-subtitle { text-align: center; font-size: 15px; color: #7a6f5e; margin-bottom: 32px; }
+  .anchor-card { background: #fff; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 2px 12px rgba(60,45,20,0.08); margin-bottom: 36px; border: 1px solid rgba(212,185,150,0.4); }
+  .anchor-img { width: 100%; aspect-ratio: 4/3; background-size: cover; background-position: center; background-color: #e8e0d3; }
+  .anchor-img--placeholder { background: linear-gradient(135deg,#e8e0d3 0%,#d4b996 100%); }
+  .anchor-body { padding: 24px 20px; }
+  .anchor-label { display: inline-block; background: #D4B996; color: #fff; padding: 4px 12px;
+    border-radius: 20px; font-size: 13px; margin-bottom: 10px; letter-spacing: 1px; }
+  .anchor-community { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  .anchor-price { font-size: 32px; font-weight: 800; color: #6B8E23; margin-bottom: 12px; }
+  .anchor-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .chip { display: inline-block; background: #F5F1EB; border: 1px solid #D4B996; color: #6b5b3a;
+    padding: 4px 12px; border-radius: 16px; font-size: 14px; }
+  .anchor-addr { font-size: 15px; color: #7a6f5e; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin: 32px 0 16px; }
+  .section-header h3 { font-size: 20px; font-weight: 700; white-space: nowrap; }
+  .section-line { flex: 1; height: 1px; background: #D4B996; opacity: 0.5; }
+  .cards-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+  @media (min-width:640px){ .cards-grid{ grid-template-columns:1fr 1fr; } }
+  @media (min-width:960px){ .cards-grid{ grid-template-columns:1fr 1fr 1fr; } }
+  .cand-card { position: relative; background: #fff; border-radius: 14px; padding: 20px 20px 18px 24px;
+    box-shadow: 0 2px 10px rgba(60,45,20,0.07); border: 1px solid rgba(212,185,150,0.3);
+    border-left: 5px solid #D4B996; transition: transform .2s ease, box-shadow .2s ease; }
+  .cand-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(60,45,20,0.12); }
+  .cand-card--cheap { border-left-color: #6B8E23; }
+  .cand-card--pricey { border-left-color: #6A5ACD; }
+  .cand-chip { display: inline-block; padding: 5px 13px; border-radius: 16px; color: #fff;
+    font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+  .cand-chip--cheap { background: #6B8E23; }
+  .cand-chip--pricey { background: #6A5ACD; }
+  .cand-community { font-size: 19px; font-weight: 700; margin-bottom: 4px; }
+  .cand-price { font-size: 28px; font-weight: 800; color: #2C2C2C; margin-bottom: 8px; }
+  .cand-meta { font-size: 16px; color: #5a5040; margin-bottom: 6px; }
+  .cand-district { font-size: 15px; color: #7a6f5e; }
+  .cta-banner { margin-top: 28px; padding: 28px 20px; background: #fff; border-radius: 16px;
+    text-align: center; border: 1px solid rgba(212,185,150,0.4); box-shadow: 0 2px 12px rgba(60,45,20,0.06); }
+  .cta-text { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+  .cta-sub { font-size: 15px; color: #7a6f5e; margin-bottom: 18px; }
+  .cta-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .cta-btn { display: inline-block; padding: 13px 26px; border-radius: 26px; font-size: 17px; font-weight: 700; color: #fff; }
+  .cta-btn--tel { background: #6B8E23; }
+  .cta-btn--line { background: #06C755; }
+  .empty-state { background: #fff; border-radius: 16px; padding: 40px 24px; text-align: center; border: 1px dashed #D4B996; }
+  .empty-icon { font-size: 48px; color: #D4B996; margin-bottom: 12px; line-height: 1; }
+  .empty-title { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+  .empty-desc { font-size: 16px; color: #6b5b3a; max-width: 480px; margin: 0 auto; }
+  .footer { margin-top: 40px; padding: 24px 16px; background: #fff; border-radius: 14px;
+    text-align: center; border: 1px solid rgba(212,185,150,0.4); }
+  .footer-tagline { font-size: 15px; color: #6b5b3a; margin-bottom: 14px; }
+  .footer-name { font-size: 19px; font-weight: 700; margin-bottom: 8px; }
+  .footer-contact { font-size: 16px; color: #2C2C2C; line-height: 2; }
+  .footer-contact a { color: #6B8E23; }
+  .footer-disclaim { font-size: 12px; color: #a89c83; margin-top: 14px; line-height: 1.7; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 class="page-title">為您挑的更多選擇</h1>
+    <p class="page-subtitle">以您看的物件為基準，整理價格高低不同的同類型選擇</p>
+    
+    <div class="anchor-card">
+      <div class="anchor-img" style="background-image:url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtS3R5fXre51C3gPh1KwipEo9I96Cu1czknTgR2eO21J2KsUaFs7iUnqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQruh-Gt23mTzaYgmqa__ngegw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyjuTGlishUwyREwEMQj6ZdUY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&amp;width=600&amp;height=450')"></div>
+      <div class="anchor-body">
+        <div class="anchor-label">您正在看的物件</div>
+        <h2 class="anchor-community">太子雲世紀 C區</h2>
+        <div class="anchor-price">1,998 萬</div>
+        <div class="anchor-meta"><span class="chip">3房</span><span class="chip">大樓</span><span class="chip">23.32 坪</span><span class="chip">屋齡 11.5 年</span></div>
+        <div class="anchor-addr">台中市西屯區西屯路三段</div>
+      </div>
+    </div>
+    <div class="section-header">
+      <h3>同類型・其他選擇</h3>
+      <span class="section-line"></span>
+    </div>
+    <div class="cards-grid">
+    <div class="cand-card cand-card--cheap">
+      <span class="cand-chip cand-chip--cheap">💎 省 500 萬</span>
+      <div class="cand-community">昌祐品觀</div>
+      <div class="cand-price">1,498 萬</div>
+      <div class="cand-meta">3房 · 22.11 坪 · 屋齡 9.5 年</div>
+      <div class="cand-district">📍 南屯區</div>
+    </div>
+    <div class="cand-card cand-card--cheap">
+      <span class="cand-chip cand-chip--cheap">💎 省 510 萬</span>
+      <div class="cand-community">桂冠歐洲</div>
+      <div class="cand-price">1,488 萬</div>
+      <div class="cand-meta">3房 · 32.83 坪 · 屋齡 28.6 年</div>
+      <div class="cand-district">📍 西屯區</div>
+    </div>
+    <div class="cand-card cand-card--cheap">
+      <span class="cand-chip cand-chip--cheap">💎 省 600 萬</span>
+      <div class="cand-community">總太心之所向</div>
+      <div class="cand-price">1,398 萬</div>
+      <div class="cand-meta">3房 · 24.22 坪 · 屋齡 2.0 年</div>
+      <div class="cand-district">📍 北屯區</div>
+    </div>
+    <div class="cand-card cand-card--cheap">
+      <span class="cand-chip cand-chip--cheap">💎 省 640 萬</span>
+      <div class="cand-community">閱讀歐洲</div>
+      <div class="cand-price">1,358 萬</div>
+      <div class="cand-meta">3房 · 33.25 坪 · 屋齡 32.1 年</div>
+      <div class="cand-district">📍 北屯區</div>
+    </div>
+    <div class="cand-card cand-card--pricey">
+      <span class="cand-chip cand-chip--pricey">🌟 多 90 萬・升級選擇</span>
+      <div class="cand-community">赫里翁傳奇</div>
+      <div class="cand-price">2,088 萬</div>
+      <div class="cand-meta">3房 · 22.13 坪 · 屋齡 9.1 年</div>
+      <div class="cand-district">📍 西屯區</div>
+    </div></div>
+    <div class="cta-banner">
+      <div class="cta-text">看中哪一間？還是想看更多同類型的選擇？</div>
+      <div class="cta-sub">這些都能幫您安排看屋，由我一手服務到底</div>
+      <div class="cta-btns">
+        <a class="cta-btn cta-btn--tel" href="tel:0920118756">📞 來電 0920-118-756</a>
+        <a class="cta-btn cta-btn--line" href="https://line.me/ti/p/~sky811117">💬 加 LINE 問我</a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="footer-tagline">為您智能挑選</div>
+      <div class="footer-name">陳景泰 房仲</div>
+      <div class="footer-contact">
+        電話 <a href="tel:0920118756">0920-118-756</a><br>
+        LINE：sky811117　·　IG：<a href="https://instagram.com/nov__817" target="_blank">@nov__817</a>
+      </div>
+      <div class="footer-disclaim">
+        一品不動產經紀股份有限公司（有巢氏房屋台中世界之心加盟店）<br>
+        經紀人 黃永隆 113彰縣字第324號　·　營業員 陳景泰 114年登字第488296號
+      </div>
+    </div>
+  </div>
+  
+<script>
+(function(){
+  var IS_ADMIN=false;
+  try{ IS_ADMIN=(localStorage.getItem('teddy_admin')==='1'); }catch(e){}
+  var SHARE_ID="NMjGaNbu";
+  var CLIENT_NAME="\u6e2c\u8a66\u5ba2";
+  var TRACK_API='https://teddy-share-app.vercel.app/api/track';
+  var startTime=Date.now();
+  var visitSent=false;
+  function postTrack(p){
+    if(IS_ADMIN)return;
+    try{ fetch(TRACK_API,{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(p),keepalive:true}); }catch(e){}
+  }
+  function trackVisit(){
+    if(visitSent)return;
+    var d=Math.round((Date.now()-startTime)/1000);
+    if(d<3)return;
+    visitSent=true;
+    postTrack({client:CLIENT_NAME,share_id:SHARE_ID,duration:d,url:location.href,referrer:document.referrer||''});
+  }
+  function trackCta(t){
+    var d=Math.round((Date.now()-startTime)/1000);
+    postTrack({client:CLIENT_NAME,share_id:SHARE_ID,cta_type:t,duration:d,url:location.href,referrer:document.referrer||''});
+  }
+  document.querySelectorAll('.cta-btn--tel').forEach(function(el){el.addEventListener('click',function(){trackCta('phone');});});
+  document.querySelectorAll('.cta-btn--line').forEach(function(el){el.addEventListener('click',function(){trackCta('line');});});
+  window.addEventListener('beforeunload',trackVisit);
+  document.addEventListener('visibilitychange',function(){if(document.hidden)trackVisit();});
+  setTimeout(trackVisit,20000);
+})();
+</script>
+</body>
+</html>
