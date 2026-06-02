@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>為您挑的更多選擇</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #F5F1EB; color: #2C2C2C;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px 80px; }
+  .page-title { font-size: 28px; font-weight: 700; text-align: center; margin: 16px 0 8px; letter-spacing: 1px; }
+  .page-subtitle { text-align: center; font-size: 15px; color: #7a6f5e; margin-bottom: 32px; }
+  .anchor-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 12px rgba(60,45,20,.08); margin-bottom: 36px; border: 1px solid rgba(212,185,150,.4); }
+  .anchor-img { width: 100%; aspect-ratio: 4/3; background-size: cover; background-position: center; background-color: #e8e0d3; }
+  .anchor-img--placeholder { background: linear-gradient(135deg,#e8e0d3 0%,#d4b996 100%); }
+  .anchor-body { padding: 22px 20px; }
+  .anchor-label { display: inline-block; background: #D4B996; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 13px; margin-bottom: 10px; letter-spacing: 1px; }
+  .anchor-community { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+  .anchor-price { font-size: 32px; font-weight: 800; color: #6B8E23; margin-bottom: 6px; }
+  .spec-table { margin-top: 12px; border-top: 1px solid #ece2d0; }
+  .spec-row { display: flex; padding: 9px 2px; border-bottom: 1px solid #f2ecde; font-size: 16px; }
+  .spec-k { width: 76px; flex-shrink: 0; color: #9a8f7a; }
+  .spec-v { color: #2C2C2C; font-weight: 600; flex: 1; }
+  .sellpoint { margin-top: 14px; font-size: 15px; color: #5d5340; line-height: 1.8; background: #faf6ee; padding: 12px 14px; border-radius: 10px; border: 1px solid #ece2d0; }
+  .sellpoint b { color: #6B8E23; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin: 32px 0 16px; }
+  .section-header h3 { font-size: 20px; font-weight: 700; white-space: nowrap; }
+  .section-line { flex: 1; height: 1px; background: #D4B996; opacity: .5; }
+  .cards-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+  @media (min-width:720px){ .cards-grid { grid-template-columns: 1fr 1fr; } }
+  .cand-card { position: relative; background: #fff; border-radius: 14px; padding: 20px 18px 16px 22px; box-shadow: 0 2px 10px rgba(60,45,20,.07); border: 1px solid rgba(212,185,150,.3); border-left: 5px solid #D4B996; }
+  .cand-card--cheap { border-left-color: #6B8E23; }
+  .cand-card--pricey { border-left-color: #6A5ACD; }
+  .cand-chip { display: inline-block; padding: 5px 13px; border-radius: 16px; color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+  .cand-chip--cheap { background: #6B8E23; }
+  .cand-chip--pricey { background: #6A5ACD; }
+  .cand-community { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .cand-price { font-size: 28px; font-weight: 800; color: #2C2C2C; margin-bottom: 8px; }
+  .cand-core { font-size: 16px; color: #5a5040; margin-bottom: 6px; }
+  .cand-district { font-size: 15px; color: #7a6f5e; }
+  .cand-detail { display: none; }
+  .cand-detail.show { display: block; }
+  .cand-toggle { margin-top: 12px; width: 100%; background: #fbf8f1; border: 1px solid #D4B996; color: #6b5b3a; padding: 10px; border-radius: 18px; font-size: 15px; font-weight: 600; cursor: pointer; }
+  .cand-toggle:active { background: #f3ead8; }
+  .cta-banner { margin-top: 28px; padding: 28px 20px; background: #fff; border-radius: 16px; text-align: center; border: 1px solid rgba(212,185,150,.4); box-shadow: 0 2px 12px rgba(60,45,20,.06); }
+  .cta-text { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+  .cta-sub { font-size: 15px; color: #7a6f5e; margin-bottom: 18px; }
+  .cta-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .cta-btn { display: inline-block; padding: 13px 26px; border-radius: 26px; font-size: 17px; font-weight: 700; color: #fff; }
+  .cta-btn--tel { background: #6B8E23; }
+  .cta-btn--line { background: #06C755; }
+  .empty-state { background: #fff; border-radius: 16px; padding: 40px 24px; text-align: center; border: 1px dashed #D4B996; }
+  .empty-icon { font-size: 48px; color: #D4B996; margin-bottom: 12px; line-height: 1; }
+  .empty-title { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+  .empty-desc { font-size: 16px; color: #6b5b3a; max-width: 480px; margin: 0 auto; }
+  .footer { margin-top: 40px; padding: 24px 16px; background: #fff; border-radius: 14px; text-align: center; border: 1px solid rgba(212,185,150,.4); }
+  .footer-tagline { font-size: 15px; color: #6b5b3a; margin-bottom: 14px; }
+  .footer-name { font-size: 19px; font-weight: 700; margin-bottom: 8px; }
+  .footer-contact { font-size: 16px; color: #2C2C2C; line-height: 2; }
+  .footer-contact a { color: #6B8E23; }
+  .footer-disclaim { font-size: 12px; color: #a89c83; margin-top: 14px; line-height: 1.7; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 class="page-title">為您挑的更多選擇</h1>
+    <p class="page-subtitle">以您看的物件為基準，整理價格高低不同的同類型選擇</p>
+    
+    <div class="anchor-card">
+      <div class="anchor-img" style="background-image:url('https://cloudfps.ycut.com.tw/v1/image/?key=NF58Ko5oaCtS3R5fXre51C3gPh1KwipEo9I96Cu1czknTgR2eO21J2KsUaFs7iUnqVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVa0jD0JJgeWt02Xc92Hgeax9ptXAdU5ZuPm-OaQhOjGrl_s5AUWG0M4UyXHW6vWx641mqPW61ZWi_DoFjJz_1ssShYsvown2RKluDB4vs3XCba78wTuCNPINc3dOPPQMQruh-Gt23mTzaYgmqa__ngegw_kxkxkdM5Y2LgriectHRRNV42ITb-1cyblH68K1E9Vb73SyWDyjuTGlishUwyREwEMQj6ZdUY17YaT0tNrA9lTN2EWLhWA61ZLz253FFxmvQjvm2wa8QiAEzkoYci-X-Ch0MsGkb&amp;width=1280&amp;height=960')"></div>
+      <div class="anchor-body">
+        <div class="anchor-label">您正在看的物件</div>
+        <h2 class="anchor-community">太子雲世紀 C區</h2>
+        <div class="anchor-price">1,998 萬</div>
+        <div class="spec-table"><div class="spec-row"><span class="spec-k">總價</span><span class="spec-v">1,998 萬</span></div><div class="spec-row"><span class="spec-k">單價</span><span class="spec-v">約 37.7 萬/坪（權狀）</span></div><div class="spec-row"><span class="spec-k">格局</span><span class="spec-v">3房2廳2衛</span></div><div class="spec-row"><span class="spec-k">權狀坪</span><span class="spec-v">53.061 坪</span></div><div class="spec-row"><span class="spec-k">主建坪</span><span class="spec-v">23.32 坪</span></div><div class="spec-row"><span class="spec-k">公設坪</span><span class="spec-v">25.93 坪（公設比 48.9%）</span></div><div class="spec-row"><span class="spec-k">陽台</span><span class="spec-v">2.659 坪</span></div><div class="spec-row"><span class="spec-k">雨遮</span><span class="spec-v">1.153 坪</span></div><div class="spec-row"><span class="spec-k">土地持分</span><span class="spec-v">5.067 坪</span></div><div class="spec-row"><span class="spec-k">樓層</span><span class="spec-v">6/21F</span></div><div class="spec-row"><span class="spec-k">屋齡</span><span class="spec-v">11.5 年</span></div><div class="spec-row"><span class="spec-k">車位</span><span class="spec-v">坡道機械車位</span></div><div class="spec-row"><span class="spec-k">管理費</span><span class="spec-v">14,000 元/季繳</span></div><div class="spec-row"><span class="spec-k">類型</span><span class="spec-v">大樓／住家用</span></div><div class="spec-row"><span class="spec-k">學區</span><span class="spec-v">市立國安國小／市立福科國中</span></div><div class="spec-row"><span class="spec-k">地址</span><span class="spec-v">台中市西屯區西屯路三段</span></div><div class="spec-row"><span class="spec-k">建照</span><span class="spec-v">民國 106 年 6 月 20 日</span></div></div>
+        <div class="sellpoint"><b>物件特色</b><br>✅ 中科核心地段、未來增值潛力強<br>位於國安一路，緊鄰中科園區與重劃區，環境清幽不吵雜，隨著中科人口陸續進駐，區域房市具高度發展潛力。<br>✅ 交通四通八達、通勤便利<br>鄰近一高、二高與中彰快速道路，5分鐘可上交流道，30分鐘直達烏日高鐵、台中港及清泉崗機場，交通便捷無憂。<br>✅ 商圈環繞、生活機能完善<br>臨近台糖、愛買、Tech mall、J-Mall等大型商圈，採買、休閒都方便；開車10分鐘即可抵達台中都會公園與世貿展館，假日休閒輕鬆自在。<br>✅ 明星學區、九年免接送<br>鄰近國安國小與福科國中，孩子上下學方便安全，是家長心目中的優質學區宅。<br>✅ 太子建設品牌、高質感三房雙車位<br>日本丹下建築團隊打造指標建築，零店面規劃、千坪休閒設施完善；高樓層採光通風極佳，三房雙車位含精美裝潢，僅售2098萬，超值稀有釋出！</div>
+      </div>
+    </div>
+    <div class="section-header">
+      <h3>同類型・其他選擇</h3>
+      <span class="section-line"></span>
+    </div>
+    <div class="cards-grid">
+    <div class="cand-card cand-card--cheap">
+      <span class="cand-chip cand-chip--cheap">💎 省 500 萬</span>
+      <div class="cand-community">昌祐品觀</div>
+      <div class="cand-price">1,498 萬</div>
+      <div class="cand-core">3房2廳2衛 · 權狀 45.61坪 · 屋齡 9.5年</div>
+      <div class="cand-district">📍 南屯區保安五街</div>
+      <div class="cand-detail" id="d0"><div class="spec-table"><div class="spec-row"><span class="spec-k">總價</span><span class="spec-v">1,498 萬</span></div><div class="spec-row"><span class="spec-k">單價</span><span class="spec-v">約 32.8 萬/坪（權狀）</span></div><div class="spec-row"><span class="spec-k">格局</span><span class="spec-v">3房2廳2衛</span></div><div class="spec-row"><span class="spec-k">權狀坪</span><span class="spec-v">45.61 坪</span></div><div class="spec-row"><span class="spec-k">主建坪</span><span class="spec-v">22.11 坪</span></div><div class="spec-row"><span class="spec-k">含車位坪</span><span class="spec-v">10.911 坪</span></div><div class="spec-row"><span class="spec-k">土地坪</span><span class="spec-v">7.28 坪</span></div><div class="spec-row"><span class="spec-k">樓層</span><span class="spec-v">4/12F</span></div><div class="spec-row"><span class="spec-k">屋齡</span><span class="spec-v">9.5 年</span></div><div class="spec-row"><span class="spec-k">車位</span><span class="spec-v">平面車位</span></div><div class="spec-row"><span class="spec-k">類型</span><span class="spec-v">電梯大樓</span></div><div class="spec-row"><span class="spec-k">地址</span><span class="spec-v">台中市南屯區保安五街</span></div></div><div class="sellpoint"><b>物件特色</b><br>南屯嶺東精科｜輕屋齡｜三房雙衛開窗｜平面車位</div></div>
+      <button class="cand-toggle" onclick="toggleDetail(0,'昌祐品觀','7232438')">看完整規格 ▾</button>
+    </div>
+    <div class="cand-card cand-card--cheap">
+      <span class="cand-chip cand-chip--cheap">💎 省 510 萬</span>
+      <div class="cand-community">桂冠歐洲</div>
+      <div class="cand-price">1,488 萬</div>
+      <div class="cand-core">3房2廳2衛 · 權狀 47.52坪 · 屋齡 28.6年</div>
+      <div class="cand-district">📍 西屯區四川路</div>
+      <div class="cand-detail" id="d1"><div class="spec-table"><div class="spec-row"><span class="spec-k">總價</span><span class="spec-v">1,488 萬</span></div><div class="spec-row"><span class="spec-k">單價</span><span class="spec-v">約 31.31 萬/坪（權狀）</span></div><div class="spec-row"><span class="spec-k">格局</span><span class="spec-v">3房2廳2衛</span></div><div class="spec-row"><span class="spec-k">權狀坪</span><span class="spec-v">47.52 坪</span></div><div class="spec-row"><span class="spec-k">主建坪</span><span class="spec-v">32.83 坪</span></div><div class="spec-row"><span class="spec-k">土地坪</span><span class="spec-v">6.55 坪</span></div><div class="spec-row"><span class="spec-k">樓層</span><span class="spec-v">7/12F</span></div><div class="spec-row"><span class="spec-k">屋齡</span><span class="spec-v">28.6 年</span></div><div class="spec-row"><span class="spec-k">車位</span><span class="spec-v">平面車位</span></div><div class="spec-row"><span class="spec-k">類型</span><span class="spec-v">電梯大樓</span></div><div class="spec-row"><span class="spec-k">地址</span><span class="spec-v">台中市西屯區四川路</span></div></div><div class="sellpoint"><b>物件特色</b><br>「專任」西屯蛋黃區全新整理採光超大三房</div></div>
+      <button class="cand-toggle" onclick="toggleDetail(1,'桂冠歐洲','6751782')">看完整規格 ▾</button>
+    </div>
+    <div class="cand-card cand-card--cheap">
+      <span class="cand-chip cand-chip--cheap">💎 省 600 萬</span>
+      <div class="cand-community">總太心之所向</div>
+      <div class="cand-price">1,398 萬</div>
+      <div class="cand-core">3房2廳2衛 · 權狀 44.55坪 · 屋齡 2.0年</div>
+      <div class="cand-district">📍 北屯區環太東路</div>
+      <div class="cand-detail" id="d2"><div class="spec-table"><div class="spec-row"><span class="spec-k">總價</span><span class="spec-v">1,398 萬</span></div><div class="spec-row"><span class="spec-k">單價</span><span class="spec-v">約 31.4 萬/坪（權狀）</span></div><div class="spec-row"><span class="spec-k">格局</span><span class="spec-v">3房2廳2衛</span></div><div class="spec-row"><span class="spec-k">權狀坪</span><span class="spec-v">44.55 坪</span></div><div class="spec-row"><span class="spec-k">主建坪</span><span class="spec-v">24.22 坪</span></div><div class="spec-row"><span class="spec-k">含車位坪</span><span class="spec-v">8.348 坪</span></div><div class="spec-row"><span class="spec-k">土地坪</span><span class="spec-v">7.02 坪</span></div><div class="spec-row"><span class="spec-k">樓層</span><span class="spec-v">10/15F</span></div><div class="spec-row"><span class="spec-k">屋齡</span><span class="spec-v">2.0 年</span></div><div class="spec-row"><span class="spec-k">車位</span><span class="spec-v">坡道平面車位</span></div><div class="spec-row"><span class="spec-k">類型</span><span class="spec-v">電梯大樓</span></div><div class="spec-row"><span class="spec-k">地址</span><span class="spec-v">台中市北屯區環太東路</span></div></div><div class="sellpoint"><b>物件特色</b><br>廍子商圈｜總太心之所向三房平車｜全新未入住</div></div>
+      <button class="cand-toggle" onclick="toggleDetail(2,'總太心之所向','7300102')">看完整規格 ▾</button>
+    </div>
+    <div class="cand-card cand-card--cheap">
+      <span class="cand-chip cand-chip--cheap">💎 省 640 萬</span>
+      <div class="cand-community">閱讀歐洲</div>
+      <div class="cand-price">1,358 萬</div>
+      <div class="cand-core">3房1廳2衛 · 權狀 387.76坪 · 屋齡 32.1年</div>
+      <div class="cand-district">📍 北屯區成功路五段</div>
+      <div class="cand-detail" id="d3"><div class="spec-table"><div class="spec-row"><span class="spec-k">總價</span><span class="spec-v">1,358 萬</span></div><div class="spec-row"><span class="spec-k">單價</span><span class="spec-v">約 141.84 萬/坪（權狀）</span></div><div class="spec-row"><span class="spec-k">格局</span><span class="spec-v">3房1廳2衛</span></div><div class="spec-row"><span class="spec-k">權狀坪</span><span class="spec-v">387.76 坪</span></div><div class="spec-row"><span class="spec-k">主建坪</span><span class="spec-v">33.25 坪</span></div><div class="spec-row"><span class="spec-k">含車位坪</span><span class="spec-v">114.22 坪</span></div><div class="spec-row"><span class="spec-k">土地坪</span><span class="spec-v">66.37 坪</span></div><div class="spec-row"><span class="spec-k">樓層</span><span class="spec-v">1/13F</span></div><div class="spec-row"><span class="spec-k">屋齡</span><span class="spec-v">32.1 年</span></div><div class="spec-row"><span class="spec-k">類型</span><span class="spec-v">電梯大樓</span></div><div class="spec-row"><span class="spec-k">地址</span><span class="spec-v">台北市內湖區成功路五段</span></div></div><div class="sellpoint"><b>物件特色</b><br>中清大第高樓採光大三房平車屋況超優</div></div>
+      <button class="cand-toggle" onclick="toggleDetail(3,'閱讀歐洲','4308114')">看完整規格 ▾</button>
+    </div>
+    <div class="cand-card cand-card--pricey">
+      <span class="cand-chip cand-chip--pricey">🌟 多 90 萬・升級選擇</span>
+      <div class="cand-community">赫里翁傳奇</div>
+      <div class="cand-price">2,088 萬</div>
+      <div class="cand-core">3房2廳2衛 · 權狀 47.45坪 · 屋齡 9.1年</div>
+      <div class="cand-district">📍 西屯區環中路三段</div>
+      <div class="cand-detail" id="d4"><div class="spec-table"><div class="spec-row"><span class="spec-k">總價</span><span class="spec-v">2,088 萬</span></div><div class="spec-row"><span class="spec-k">單價</span><span class="spec-v">約 44.0 萬/坪（權狀）</span></div><div class="spec-row"><span class="spec-k">格局</span><span class="spec-v">3房2廳2衛</span></div><div class="spec-row"><span class="spec-k">權狀坪</span><span class="spec-v">47.45 坪</span></div><div class="spec-row"><span class="spec-k">主建坪</span><span class="spec-v">22.13 坪</span></div><div class="spec-row"><span class="spec-k">含車位坪</span><span class="spec-v">9.596 坪</span></div><div class="spec-row"><span class="spec-k">土地坪</span><span class="spec-v">3.05 坪</span></div><div class="spec-row"><span class="spec-k">樓層</span><span class="spec-v">27/27F</span></div><div class="spec-row"><span class="spec-k">屋齡</span><span class="spec-v">9.1 年</span></div><div class="spec-row"><span class="spec-k">車位</span><span class="spec-v">坡道平面車位</span></div><div class="spec-row"><span class="spec-k">類型</span><span class="spec-v">電梯大樓</span></div><div class="spec-row"><span class="spec-k">地址</span><span class="spec-v">台中市西屯區環中路三段</span></div></div><div class="sellpoint"><b>物件特色</b><br>七期西側赫里翁傳奇高樓美視野3房+平車</div></div>
+      <button class="cand-toggle" onclick="toggleDetail(4,'赫里翁傳奇','7351271')">看完整規格 ▾</button>
+    </div></div>
+    <div class="cta-banner">
+      <div class="cta-text">看中哪一間？還是想看更多同類型的選擇？</div>
+      <div class="cta-sub">這些都能幫您安排看屋，由我一手服務到底</div>
+      <div class="cta-btns">
+        <a class="cta-btn cta-btn--tel" href="tel:0920118756">📞 來電 0920-118-756</a>
+        <a class="cta-btn cta-btn--line" href="https://line.me/ti/p/~sky811117">💬 加 LINE 問我</a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="footer-tagline">為您智能挑選</div>
+      <div class="footer-name">陳景泰 房仲</div>
+      <div class="footer-contact">
+        電話 <a href="tel:0920118756">0920-118-756</a><br>
+        LINE：sky811117　·　IG：<a href="https://instagram.com/nov__817" target="_blank">@nov__817</a>
+      </div>
+      <div class="footer-disclaim">
+        一品不動產經紀股份有限公司（有巢氏房屋台中世界之心加盟店）<br>
+        經紀人 黃永隆 113彰縣字第324號　·　營業員 陳景泰 114年登字第488296號
+      </div>
+    </div>
+  </div>
+  
+<script>
+  var SHARE_ID="ilwc6bbB";
+  var CLIENT_NAME="\u5b8c\u6574\u7248\u6e2c\u8a66";
+  var TRACK_API='https://teddy-share-app.vercel.app/api/track';
+  var IS_ADMIN=false; try{ IS_ADMIN=(localStorage.getItem('teddy_admin')==='1'); }catch(e){}
+  var startTime=Date.now(), visitSent=false;
+  function postTrack(p){ if(IS_ADMIN)return; try{ fetch(TRACK_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p),keepalive:true}); }catch(e){} }
+  function trackVisit(){ if(visitSent)return; var d=Math.round((Date.now()-startTime)/1000); if(d<3)return; visitSent=true; postTrack({client:CLIENT_NAME,share_id:SHARE_ID,duration:d,url:location.href,referrer:document.referrer||''}); }
+  function trackCta(t){ var d=Math.round((Date.now()-startTime)/1000); postTrack({client:CLIENT_NAME,share_id:SHARE_ID,cta_type:t,duration:d,url:location.href,referrer:document.referrer||''}); }
+  function toggleDetail(idx, name, houseId){
+    var el=document.getElementById('d'+idx);
+    var btn=el.nextElementSibling;
+    var open=el.classList.toggle('show');
+    btn.innerHTML = open ? '收合 ▴' : '看完整規格 ▾';
+    if(open){ var d=Math.round((Date.now()-startTime)/1000);
+      postTrack({client:CLIENT_NAME,share_id:SHARE_ID,clicked_slug:houseId,clicked_name:name,duration:d,url:location.href,referrer:document.referrer||''}); }
+  }
+  document.querySelectorAll('.cta-btn--tel').forEach(function(el){el.addEventListener('click',function(){trackCta('phone');});});
+  document.querySelectorAll('.cta-btn--line').forEach(function(el){el.addEventListener('click',function(){trackCta('line');});});
+  window.addEventListener('beforeunload',trackVisit);
+  document.addEventListener('visibilitychange',function(){if(document.hidden)trackVisit();});
+  setTimeout(trackVisit,20000);
+</script>
+</body>
+</html>
