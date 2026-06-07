@@ -209,8 +209,18 @@
   .spec-label { font-size: 14px; color: var(--text-muted); letter-spacing: 1px; }
   .spec-value { font-size: 17px; color: var(--text); font-weight: 500; }
   .spec-value.highlight { color: var(--wood-deep); font-weight: 700; }
-  .card-address { font-size: 16px; color: var(--text-soft); margin-bottom: 18px; padding-top: 16px; border-top: 1px solid var(--bg-soft); display: flex; align-items: flex-start; gap: 7px; line-height: 1.6; }
+  .card-address { font-size: 16px; color: var(--text-soft); margin-bottom: 14px; padding-top: 16px; border-top: 1px solid var(--bg-soft); display: flex; align-items: flex-start; gap: 7px; line-height: 1.6; }
   .card-address::before { content: '📍'; flex-shrink: 0; }
+  .card-map { margin-bottom: 18px; }
+  .card-map summary { cursor: pointer; font-size: 15px; color: var(--wood-deep); padding: 10px 14px; background: var(--bg-soft); border-radius: 10px; font-weight: 600; list-style: none; display: flex; align-items: center; gap: 8px; user-select: none; transition: background 0.2s; }
+  .card-map summary::-webkit-details-marker { display: none; }
+  .card-map summary:hover { background: #EFE6D6; }
+  .card-map-icon { flex-shrink: 0; }
+  .card-map-label { flex: 1; }
+  .card-map-arrow { font-size: 13px; transition: transform 0.2s; opacity: 0.7; }
+  .card-map[open] .card-map-arrow { transform: rotate(180deg); }
+  .card-map-frame { margin-top: 10px; border-radius: 10px; overflow: hidden; border: 1px solid var(--bg-soft); }
+  .card-map-frame iframe { width: 100%; height: 220px; border: 0; display: block; }
   .card-actions { display: flex; gap: 8px; margin-top: auto; }
   .card-cta { flex: 1; background: var(--wood-deep); color: #FFF; text-align: center; text-decoration: none; padding: 14px 18px; border-radius: 12px; font-size: 17px; font-weight: 700; letter-spacing: 1.5px; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
   .card-cta:hover { background: var(--accent); transform: translateY(-1px); }
@@ -482,6 +492,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市西屯區安林路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市西屯區安林路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/6MW3fx" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -519,6 +533,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市西屯區福雅路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市西屯區福雅路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/6nDvx8" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -556,6 +574,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市西屯區同志巷</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市西屯區同志巷" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/8WQMFr" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -605,6 +627,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市大雅區中山北路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市大雅區中山北路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/8Wx4Hr" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -634,6 +660,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市大雅區中山路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市大雅區中山路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/8ZTHFt" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -663,6 +693,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市大雅區東大路二段</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市大雅區東大路二段" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/5FphXb" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -692,6 +726,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市大雅區東大路二段</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市大雅區東大路二段" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/7jR3Ys" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -721,6 +759,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市大雅區雅環路三段大明一巷</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市大雅區雅環路三段大明一巷" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/6gk2wT" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -750,6 +792,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市大雅區雅潭路四段</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市大雅區雅潭路四段" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/5Mzg8J" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -787,6 +833,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">無車位</span></div>
         </div>
         <div class="card-address">台中市大雅區中清路四段</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市大雅區中清路四段" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/7NGBQF" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -824,6 +874,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市大雅區民豐街</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市大雅區民豐街" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/8xbfZ8" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -873,6 +927,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市龍井區東海街</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市龍井區東海街" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/7WJVxD" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -902,6 +960,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市龍井區藝術南街</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市龍井區藝術南街" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/5KyJqr" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -931,6 +993,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市龍井區遊園北路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市龍井區遊園北路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/6c8Mdz" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -968,6 +1034,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市龍井區遊園北路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市龍井區遊園北路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/6mV6vq" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -1017,6 +1087,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市沙鹿區忠貞路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市沙鹿區忠貞路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/6FnTfp" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -1046,6 +1120,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市沙鹿區忠貞路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市沙鹿區忠貞路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/99hbkx" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -1083,6 +1161,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市沙鹿區清泉路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市沙鹿區清泉路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/6KhRR2" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -1112,6 +1194,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市沙鹿區清泉路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市沙鹿區清泉路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/7jDCTD" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -1149,6 +1235,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市沙鹿區東海路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市沙鹿區東海路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/8g9gJ5" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -1186,6 +1276,10 @@
           <div class="spec-item"><span class="spec-label">車位坪數</span><span class="spec-value">含於主建</span></div>
         </div>
         <div class="card-address">台中市沙鹿區清泉路</div>
+        <details class="card-map">
+          <summary><span class="card-map-icon">🗺️</span><span class="card-map-label">在地圖上看路段位置</span><span class="card-map-arrow">▾</span></summary>
+          <div class="card-map-frame"><iframe data-q="台中市沙鹿區清泉路" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="路段位置地圖"></iframe></div>
+        </details>
         
         <div class="card-actions">
           <a class="card-cta" href="https://x.ychouse.tw/7SpQs8" target="_blank" rel="noopener">看完整資訊 與 全部照片 <span class="card-cta-arrow">→</span></a>
@@ -1619,6 +1713,18 @@
   window.addEventListener('beforeunload', trackVisit);
   // 也定期 ping 一次（讓還在閱讀的訪客也記到，避免關閉太快沒記到）
   setTimeout(trackVisit, 30000);
+
+  // 摺疊式路段地圖：展開時才把 src 灌進 iframe（lazy load 省流量、不影響未展開卡片的滑動）
+  var MAPS_EMBED_KEY = "AIzaSyCr3x28KwPxPnRGsqXSjZC4zxF-7deAK5E";
+  document.querySelectorAll('details.card-map').forEach(function(d) {
+    d.addEventListener('toggle', function() {
+      if (!d.open) return;
+      var iframe = d.querySelector('iframe');
+      if (iframe && !iframe.src && iframe.dataset.q) {
+        iframe.src = 'https://www.google.com/maps/embed/v1/place?key=' + MAPS_EMBED_KEY + '&q=' + encodeURIComponent(iframe.dataset.q);
+      }
+    });
+  });
 })();
 </script>
 
